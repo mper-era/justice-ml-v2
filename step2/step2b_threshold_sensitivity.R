@@ -2,7 +2,7 @@
 # STEP 2B: Threshold Sensitivity Check
 
 # Purpose: Step 2's main finding (a strong NEGATIVE correlation between
-# Rule A harm and Rule B harm across groups -- r = -0.783 at the 25th/75th
+# Rule A harm and Rule B harm across groups - r = -0.783 at the 25th/75th
 # percentile thresholds) is a striking result. Before treating it as a real
 # structural finding rather than an artifact of WHERE exactly the threshold
 # was drawn, this script re-runs the same logic across a RANGE of threshold
@@ -10,7 +10,7 @@
 #
 # If the negative correlation persists across multiple threshold choices
 # (not just 25/75), that's strong evidence the inversion is a genuine
-# property of how error is distributed across groups in this model --
+# property of how error is distributed across groups in this model -
 # not a coincidence of one specific cutoff choice.
 #
 # PREREQUISITE: requires `test_scored` in your environment (from Step 1).
@@ -18,14 +18,14 @@
 
 library(tidyverse)
 
-stopifnot("test_scored not found -- re-source Step 1 or load from CSV" =
+stopifnot("test_scored not found - re-source Step 1 or load from CSV" =
             exists("test_scored"))
 
 
 # 1. DEFINE A RANGE OF THRESHOLD PAIRS TO TEST
 
-# Each pair: (Rule A percentile -- the "wide net" outreach cutoff, LOWER means
-# wider net / more people flagged) and (Rule B percentile -- the "narrow net"
+# Each pair: (Rule A percentile - the "wide net" outreach cutoff, LOWER means
+# wider net / more people flagged) and (Rule B percentile - the "narrow net"
 # review cutoff, HIGHER means narrower net / fewer people flagged).
 # We test from a mild contrast (40/60) to the original (25/75) to a more
 # extreme contrast (10/90), to see if the inversion is specific to one
@@ -114,7 +114,7 @@ sensitivity_results <- map2_dfr(
 cat("\n\n===== THRESHOLD SENSITIVITY RESULTS =====\n")
 cat("If race_correlation and income_correlation stay consistently negative\n")
 cat("across this whole range, the harm-inversion finding is robust to your\n")
-cat("specific threshold choice -- not an artifact of picking 25/75 exactly.\n\n")
+cat("specific threshold choice - not an artifact of picking 25/75 exactly.\n\n")
 print(sensitivity_results)
 
 
@@ -129,7 +129,7 @@ cat("  five threshold pairs, you can confidently claim the harm-inversion is a\n
 cat("  structural property of the model's error distribution, not a one-off\n")
 cat("  result from arbitrarily choosing the 25th/75th percentiles.\n")
 cat("- If correlations weaken substantially at milder thresholds (e.g. 40/60),\n")
-cat("  that's still useful -- it tells you the inversion is most pronounced when\n")
+cat("  that's still useful - it tells you the inversion is most pronounced when\n")
 cat("  institutions set AGGRESSIVE thresholds in either direction, which is\n")
 cat("  itself a real and reportable finding about when this harm pattern is\n")
 cat("  worst.\n")

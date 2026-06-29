@@ -1,5 +1,5 @@
 
-# STEP 5: ALL FIGURES -- ggplot2
+# STEP 5: ALL FIGURES - ggplot2
 
 # Every plot for the paper lives in this one file, in clearly labeled
 # sections. Shared palette/theme objects are defined once at the top so
@@ -7,14 +7,14 @@
 #
 # Each section is self-contained: loads its own data (from memory if present,
 # else from the saved CSV), builds the plot, prints it, and saves PNG + PDF.
-# Re-running the whole file is cheap -- no modeling, just plotting from
+# Re-running the whole file is cheap - no modeling, just plotting from
 # already-computed results.
 
 library(tidyverse)
 library(scales)
 
 
-# 0. SHARED STYLE -- change once, applies everywhere
+# 0. SHARED STYLE - change once, applies everywhere
 
 
 # Core palette
@@ -44,14 +44,14 @@ theme_paper <- function(base_size = 13) {
     )
 }
 
-# Output directory for all figures -- separate from scripts/data
+# Output directory for all figures - separate from scripts/data
 PLOTS_DIR <- "plots"
 if (!dir.exists(PLOTS_DIR)) {
   dir.create(PLOTS_DIR)
   cat(sprintf("Created directory: %s/\n", PLOTS_DIR))
 }
 
-# Standard save helper -- saves PNG only per-plot, into plots/. All plots also
+# Standard save helper - saves PNG only per-plot, into plots/. All plots also
 # get collected into `all_plots_list` below, so a single combined PDF can be
 # built at the end of the script instead of one PDF per figure.
 all_plots_list <- list()
@@ -72,7 +72,7 @@ INCOME_LEVELS <- c("Below poverty line", "Near poverty (1-2x)", "Middle (2-4x)",
 
 
 
-# PLOT 1: Harm Inversion -- Income Tier
+# PLOT 1: Harm Inversion - Income Tier
 
 if (!exists("comparison_income")) {
   comparison_income <- read_csv("data/step3e_comparison_income_pooled.csv", show_col_types = FALSE)
@@ -96,7 +96,7 @@ p1_harm_inversion_income <- ggplot(income_long, aes(x = income_tier, y = harm_ra
                                "Rule B: Review\n(wrongly-flagged harm)" = COLOR_RULE_B), name = NULL) +
   labs(
     title = "Who the proxy harms depends on what it's used for",
-    subtitle = "Wealthier disabled respondents are missed by outreach; poorer non-disabled\nrespondents are wrongly flagged for review -- same model, opposite populations harmed",
+    subtitle = "Wealthier disabled respondents are missed by outreach; poorer non-disabled\nrespondents are wrongly flagged for review - same model, opposite populations harmed",
     x = NULL, y = "Harm rate within base population",
     caption = "Base population: true disability cases (Rule A) / true non-disability cases (Rule B).\nNHANES 2013-2018 pooled, n = 4,733 held-out test respondents."
   ) +
@@ -108,7 +108,7 @@ save_fig(p1_harm_inversion_income, "step5_plot1_harm_inversion_income")
 
 
 
-# PLOT 2: Harm Inversion -- Race/Ethnicity
+# PLOT 2: Harm Inversion - Race/Ethnicity
 
 if (!exists("comparison_race")) {
   comparison_race <- read_csv("data/step3e_comparison_race_pooled.csv", show_col_types = FALSE)
@@ -132,7 +132,7 @@ p2_harm_inversion_race <- ggplot(race_long, aes(x = race_eth_label_orig, y = har
                                "Rule B: Review\n(wrongly-flagged harm)" = COLOR_RULE_B), name = NULL) +
   labs(
     title = "The same inversion holds across race/ethnicity",
-    subtitle = "Non-Hispanic Asian respondents are most missed by outreach but least\nlikely to be wrongly flagged for review -- White respondents show the reverse",
+    subtitle = "Non-Hispanic Asian respondents are most missed by outreach but least\nlikely to be wrongly flagged for review - White respondents show the reverse",
     x = NULL, y = "Harm rate within base population",
     caption = "NHANES 2013-2018 pooled, n = 4,733 held-out test respondents."
   ) +
@@ -144,7 +144,7 @@ save_fig(p2_harm_inversion_race, "step5_plot2_harm_inversion_race", width = 9, h
 
 
 
-# PLOT 3: Bootstrap 95% CIs -- Income Tier (the "is it real or noise" figure)
+# PLOT 3: Bootstrap 95% CIs - Income Tier (the "is it real or noise" figure)
 
 if (!exists("ci_summary_pooled")) {
   ci_summary_pooled <- read_csv("data/step3d_bootstrap_ci_summary_pooled.csv", show_col_types = FALSE)
@@ -162,7 +162,7 @@ p3_bootstrap_ci_income <- ggplot(income_ci, aes(x = group, y = mean_fnr)) +
   scale_y_continuous(labels = percent_format(accuracy = 1), expand = expansion(mult = c(0, 0.22))) +
   labs(
     title = "The income gap is statistically real, not sampling noise",
-    subtitle = "False-negative rate by income tier, with 95% bootstrap confidence intervals\n(2,000 iterations) -- the poorest and wealthiest tiers' intervals do not overlap",
+    subtitle = "False-negative rate by income tier, with 95% bootstrap confidence intervals\n(2,000 iterations) - the poorest and wealthiest tiers' intervals do not overlap",
     x = NULL, y = "False negative rate",
     caption = "Bootstrapped 95% CIs, 2,000 resampled model refits on pooled NHANES 2013-2018 data."
   ) +
@@ -173,7 +173,7 @@ save_fig(p3_bootstrap_ci_income, "step5_plot3_bootstrap_ci_income")
 
 
 
-# PLOT 4: Bootstrap 95% CIs -- Race/Ethnicity
+# PLOT 4: Bootstrap 95% CIs - Race/Ethnicity
 
 race_ci <- ci_summary_pooled %>%
   filter(group_type == "race") %>%
@@ -187,7 +187,7 @@ p4_bootstrap_ci_race <- ggplot(race_ci, aes(x = group, y = mean_fnr)) +
   scale_y_continuous(labels = percent_format(accuracy = 1), expand = expansion(mult = c(0, 0.22))) +
   labs(
     title = "Non-Hispanic Asian respondents: the clearest race-based gap",
-    subtitle = "False-negative rate by race/ethnicity, with 95% bootstrap confidence intervals --\nAsian and White respondents' intervals no longer overlap after pooling cycles",
+    subtitle = "False-negative rate by race/ethnicity, with 95% bootstrap confidence intervals -\nAsian and White respondents' intervals no longer overlap after pooling cycles",
     x = NULL, y = "False negative rate",
     caption = "Bootstrapped 95% CIs, 2,000 resampled model refits on pooled NHANES 2013-2018 data."
   ) +
@@ -199,7 +199,7 @@ save_fig(p4_bootstrap_ci_race, "step5_plot4_bootstrap_ci_race", width = 9, heigh
 
 
 
-# PLOT 5: Per-Domain Breakdown -- where the model actually has signal
+# PLOT 5: Per-Domain Breakdown - where the model actually has signal
 
 if (!exists("all_domain_income")) {
   all_domain_income <- read_csv("data/step4b_per_domain_income.csv", show_col_types = FALSE)
@@ -226,7 +226,7 @@ p5_per_domain_income <- ggplot(domain_income_plot_df, aes(x = income_tier, y = f
   scale_y_continuous(labels = percent_format(accuracy = 1), limits = c(0, 1)) +
   labs(
     title = "The income gradient is concentrated in mobility, not other domains",
-    subtitle = "Hearing and vision difficulty are barely detectable by this proxy for ANY income\ngroup; mobility is the one domain with real signal -- and the clearest income gradient",
+    subtitle = "Hearing and vision difficulty are barely detectable by this proxy for ANY income\ngroup; mobility is the one domain with real signal - and the clearest income gradient",
     x = NULL, y = "False negative rate",
     caption = "Per-domain models fit separately on each of the 6 DLQ disability domains, pooled NHANES 2013-2018."
   ) +
@@ -238,7 +238,7 @@ save_fig(p5_per_domain_income, "step5_plot5_per_domain_income", width = 9, heigh
 
 
 
-# PLOT 6: Calibration -- predicted vs observed probability, overall
+# PLOT 6: Calibration - predicted vs observed probability, overall
 
 if (!exists("overall_calibration")) {
   overall_calibration <- read_csv("data/step4a_calibration_overall.csv", show_col_types = FALSE)
@@ -252,7 +252,7 @@ p6_calibration <- ggplot(overall_calibration, aes(x = mean_predicted_prob, y = o
   scale_y_continuous(labels = percent_format(accuracy = 1), limits = c(0, 1)) +
   labs(
     title = "Predicted probabilities track observed rates well overall",
-    subtitle = "10-bin calibration curve, all respondents pooled -- points close to the dashed\ndiagonal indicate predicted probabilities are reasonably trustworthy on average",
+    subtitle = "10-bin calibration curve, all respondents pooled - points close to the dashed\ndiagonal indicate predicted probabilities are reasonably trustworthy on average",
     x = "Mean predicted probability (per bin)", y = "Observed disability rate (per bin)",
     caption = "Mean absolute calibration gap (overall): 0.024. Pooled NHANES 2013-2018 held-out test set."
   ) +
@@ -264,7 +264,7 @@ save_fig(p6_calibration, "step5_plot6_calibration_overall", width = 7, height = 
 
 
 
-# PLOT 7: Calibration error by subgroup -- the "reliability ≠ sensitivity" figure
+# PLOT 7: Calibration error by subgroup - the "reliability ≠ sensitivity" figure
 
 race_cal_summary <- read_csv("data/step4a_calibration_summary_race.csv", show_col_types = FALSE)
 
@@ -286,7 +286,7 @@ save_fig(p7_calibration_by_race, "step5_plot7_calibration_by_race")
 
 
 
-# PLOT 8: Cross-cycle generalization -- random split vs. temporal split
+# PLOT 8: Cross-cycle generalization - random split vs. temporal split
 
 # Manually constructed comparison table (pulling key numbers from step3d and
 # step4d's printed output) since these live in two different script runs'
@@ -325,7 +325,7 @@ save_fig(p8_cross_cycle, "step5_plot8_cross_cycle_generalization")
 
 
 
-# MASTER PDF -- all 8 figures combined into one document
+# MASTER PDF - all 8 figures combined into one document
 
 # A single PDF device stays open for the whole document; pages can't change
 # size mid-document in the base pdf() device, so we size the document to fit
@@ -355,6 +355,3 @@ cat(sprintf("\nSaved combined master PDF: %s (%d figures)\n", master_pdf_path, l
 cat("\n\nAll 8 figures generated:\n")
 cat(sprintf("  - Individual PNGs in %s/\n", PLOTS_DIR))
 cat(sprintf("  - One combined PDF: %s\n", master_pdf_path))
-cat("\nTo change the house style (colors, fonts, theme), edit Section 0 only --\n")
-cat("every plot below references COLOR_* variables and theme_paper(), so a\n")
-cat("single edit at the top updates the whole set.\n")

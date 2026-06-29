@@ -11,7 +11,7 @@
 #     questions) so the model is genuinely inferring disability status from
 #     indirect signal, not reading a paraphrase of the answer.
 #   - Output: subgroup-stratified accuracy / error rates by race, income
-#     tier, and education -- this is your Axis 1 / Axis 2 evidence base,
+#     tier, and education - this is your Axis 1 / Axis 2 evidence base,
 #     and the input to Step 2's decision-rule overlay.
 
 
@@ -23,29 +23,29 @@ library(caret)
 library(survey)
 library(pROC)
 
-set.seed(42)  # reproducibility -- report this in your methods section
+set.seed(42)  # reproducibility - report this in your methods section
 
 
 # 1. PULL RAW TABLES (2017-2018 cycle, suffix _J)
 
 # NOTE: nhanesA scrapes CDC's site live each call. If a request times out,
-# just re-run that one line -- no need to redo the whole script.
+# just re-run that one line - no need to redo the whole script.
 demo <- nhanes("DEMO_J")   # demographics + sample weights
-dlq  <- nhanes("DLQ_J")    # disability questionnaire -- GROUND TRUTH lives here
-pfq  <- nhanes("PFQ_J")    # physical functioning -- used CAREFULLY, see Section 3
+dlq  <- nhanes("DLQ_J")    # disability questionnaire - GROUND TRUTH lives here
+pfq  <- nhanes("PFQ_J")    # physical functioning - used CAREFULLY, see Section 3
 mcq  <- nhanes("MCQ_J")    # medical conditions questionnaire
 hiq  <- nhanes("HIQ_J")    # health insurance
 huq  <- nhanes("HUQ_J")    # healthcare utilization/access
 ocq  <- nhanes("OCQ_J")    # occupation/employment
 
-# Quick sanity check on row counts before merging -- catch silent pull failures early
+# Quick sanity check on row counts before merging - catch silent pull failures early
 cat("Row counts as pulled:\n")
 for (nm in c("demo","dlq","pfq","mcq","hiq","huq","ocq")) {
   cat(sprintf("  %-6s %d rows\n", nm, nrow(get(nm))))
 }
 
 
-# 2. BUILD THE LABEL (Y) -- the variable we will withhold and predict
+# 2. BUILD THE LABEL (Y) - the variable we will withhold and predict
 
 # DLQ_J domains (per CDC documentation):
 #   DLQ010 - serious difficulty hearing
@@ -78,10 +78,10 @@ cat("\nLabel distribution (before merge):\n")
 print(table(dlq_label$disability_label, useNA = "always"))
 
 
-# 3. BUILD THE FEATURE SET (X) -- indirect correlates ONLY
+# 3. BUILD THE FEATURE SET (X) - indirect correlates ONLY
 
 # DELIBERATE EXCLUSION: PFQ items that directly ask about walking/mobility
-# limitation (PFQ061-series) are NOT included as predictors -- they are near-
+# limitation (PFQ061-series) are NOT included as predictors - they are near-
 # paraphrases of DLQ050 and would make this a circular relabeling task rather
 # than a genuine held-out prediction. We use only PFQ items that are adjacent
 # but not redundant: use of special equipment, which is a behavioral/material
@@ -163,7 +163,7 @@ analytic_df <- demo_feat %>%
   left_join(ocq_feat, by = "seqn") %>%
   left_join(dlq_label, by = "seqn")
 
-# Restrict to adults (16+, matching DLQ's direct-interview population --
+# Restrict to adults (16+, matching DLQ's direct-interview population -
 # under-16 responses are proxy-reported and behave differently; keeping them
 # in would muddy the subgroup error analysis)
 analytic_df <- analytic_df %>% filter(age >= 16)
@@ -179,7 +179,7 @@ print(prop.table(table(analytic_df$disability_label)))
 
 # 5. RECODE CATEGORICALS AND HANDLE MISSINGNESS IN FEATURES
 
-# We do NOT silently drop rows with any missing feature -- that would bias
+# We do NOT silently drop rows with any missing feature - that would bias
 # the sample toward people who answer every question, which is itself a
 # demographic pattern. Instead: impute categorical NAs as an explicit
 # "Missing" level, and median-impute numerics, so missingness becomes a
@@ -253,7 +253,7 @@ test_df   <- analytic_df[-train_idx, ]
 cat(sprintf("\nTrain n = %d | Test n = %d\n", nrow(train_df), nrow(test_df)))
 
 
-# 7. MODEL -- full Random Forest, no shortcuts on complexity
+# 7. MODEL - full Random Forest, no shortcuts on complexity
 
 feature_cols <- c("sex", "age", "education", "marital_status",
                   "poverty_ratio", "household_size", "uses_special_equipment",
@@ -272,7 +272,7 @@ test_model_df <- test_df %>% select(disability_label, all_of(feature_cols), seqn
 # Note: race_eth_label is intentionally available to the model here. If you want
 # a stricter "race-blind" version to compare against (does excluding race as an
 # input feature change subgroup error rates?), duplicate this block with
-# feature_cols minus race_eth_label -- a useful robustness check for your paper.
+# feature_cols minus race_eth_label - a useful robustness check for your paper.
 
 rf_model <- randomForest(
   disability_label ~ .,
@@ -305,7 +305,7 @@ overall_auc <- roc(test_scored$disability_label, test_scored$predicted_prob_yes)
 cat(sprintf("\nOverall AUC: %.3f\n", auc(overall_auc)))
 
 
-# 10. SUBGROUP-STRATIFIED ERROR -- THIS IS YOUR AXIS 1/AXIS 2 EVIDENCE
+# 10. SUBGROUP-STRATIFIED ERROR - THIS IS YOUR AXIS 1/AXIS 2 EVIDENCE
 
 subgroup_accuracy <- function(df, group_var) {
   df %>%

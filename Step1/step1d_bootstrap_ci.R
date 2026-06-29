@@ -5,7 +5,7 @@
 # Non-Hispanic Asian respondents, n=222") with no uncertainty range. This
 # script resamples the test set thousands of times to put a real 95% CI
 # around each subgroup's sensitivity/specificity/FNR, so you can say whether
-# an observed gap is distinguishable from sampling noise -- not just report
+# an observed gap is distinguishable from sampling noise - not just report
 # a number from a single train/test split.
 #
 # METHOD: rather than just bootstrapping the existing test set predictions
@@ -13,7 +13,7 @@
 # set, not in the model itself), this does the more rigorous version:
 # repeatedly re-splits train/test, refits the Random Forest each time, and
 # records subgroup metrics from each fresh fit. This is why it's an overnight
-# job, not a 2-minute one -- it's effectively running Step 1's model fit
+# job, not a 2-minute one - it's effectively running Step 1's model fit
 # hundreds of times over.
 #
 # Run AFTER sourcing the full step1 script (analytic_df must exist).
@@ -23,7 +23,7 @@ library(tidyverse)
 library(randomForest)
 library(caret)
 
-N_BOOTSTRAP <- 5000   # 5000 full model refits -- this is the overnight-sized number
+N_BOOTSTRAP <- 5000   # 5000 full model refits - this is the overnight-sized number
 # drop to 50 first to sanity-check the script runs end-to-end
 # before committing to the full overnight run
 
@@ -84,7 +84,7 @@ bootstrap_subgroup_metrics <- function(seed_val) {
 }
 
 cat(sprintf("Starting %d bootstrap iterations at %s\n", N_BOOTSTRAP, Sys.time()))
-cat("This will take a while -- each iteration refits a full Random Forest.\n")
+cat("This will take a while - each iteration refits a full Random Forest.\n")
 cat("Progress prints every 25 iterations.\n\n")
 
 results_list <- vector("list", N_BOOTSTRAP)
@@ -130,9 +130,9 @@ print(ci_summary, n = 50)
 
 cat("\n\nDone. Saved files:\n")
 cat("  - bootstrap_all_iterations_raw.csv   (every iteration's raw metrics)\n")
-cat("  - bootstrap_ci_summary.csv           (final 95% CIs per subgroup -- USE THIS)\n")
+cat("  - bootstrap_ci_summary.csv           (final 95% CIs per subgroup - USE THIS)\n")
 cat("\nHow to read this: if two subgroups' FNR confidence intervals do NOT overlap,\n")
-cat("the gap between them is statistically distinguishable from sampling noise --\n")
+cat("the gap between them is statistically distinguishable from sampling noise -\n")
 cat("a much stronger claim than a single point estimate.\n")
 
 system('osascript -e \'display notification "Bootstrap run complete" with title "R Script Finished"\'')

@@ -2,14 +2,14 @@
 # STEP 4C: Missing-Education Investigation
 
 # Purpose: across every prior run, the "Missing" education category behaved
-# strangely -- e.g. in Step 1's first run, sensitivity for this group was
+# strangely - e.g. in Step 1's first run, sensitivity for this group was
 # just 0.087 (FNR 91.3%), far worse than any other education category. This
 # script investigates WHY, rather than just imputing past it as before.
 #
 # Key question: are people who skip the education question on NHANES
 # systematically different in ways that matter (age, survey mode, proxy-
-# reported interview, language barrier) -- i.e. is the missingness itself
-# informative -- or is this just a small, noisy subgroup?
+# reported interview, language barrier) - i.e. is the missingness itself
+# informative - or is this just a small, noisy subgroup?
 #
 # PREREQUISITE: requires `pooled_df` in memory (auto-reloads from CSV).
 
@@ -17,7 +17,7 @@
 library(tidyverse)
 
 if (!exists("pooled_df")) {
-  cat("pooled_df not found -- loading from saved CSV\n")
+  cat("pooled_df not found - loading from saved CSV\n")
   pooled_df <- read_csv("data/step3c_pooled_analytic_df.csv", show_col_types = FALSE)
 }
 
@@ -68,8 +68,8 @@ print(pooled_df %>% group_by(education_missing_flag, marital_status) %>%
 
 # If education-missing respondents ALSO tend to be missing other fields
 # (insurance, healthcare access, work status), that's a sign of a more
-# general pattern -- e.g. a harder-to-interview population (language
-# barriers, proxy interviews, lower survey engagement) -- rather than
+# general pattern - e.g. a harder-to-interview population (language
+# barriers, proxy interviews, lower survey engagement) - rather than
 # something specific to the education question.
 
 cat("\n===== CO-OCCURRING MISSINGNESS: do education-missing respondents also\n")
@@ -90,7 +90,7 @@ print(other_missing_check)
 cat("\nInterpretation: if the 'Missing' education row shows MUCH higher %s\n")
 cat("missing in other fields too, this confirms a general low-response-\n")
 cat("engagement pattern rather than something specific to the education\n")
-cat("question alone -- which matters because it would mean the model is\n")
+cat("question alone - which matters because it would mean the model is\n")
 cat("trying to predict disability for a group with systematically LESS\n")
 cat("usable signal across the board, not just one missing field.\n")
 
@@ -118,12 +118,3 @@ print(pooled_df %>% group_by(cycle, education_missing_flag) %>%
 write_csv(other_missing_check, "data/step4c_co_occurring_missingness.csv")
 
 cat("\n\nStep 4c complete.\n")
-cat("How to read this for your paper:\n")
-cat("- If this group is small (likely under 3-5%% of the sample), skews\n")
-cat("  older, has much higher co-occurring missingness in OTHER fields, and/\n")
-cat("  or has a notably different true disability rate -- that's evidence the\n")
-cat("  poor sensitivity for this group in earlier runs reflects a genuinely\n")
-cat("  harder-to-model population (less signal available), not a coding bug\n")
-cat("  or random noise. Worth a paragraph in your limitations section: missing\n")
-cat("  data is not missing at random here, and that itself is a finding\n")
-cat("  consistent with your paper's broader thesis about structural data gaps.\n")

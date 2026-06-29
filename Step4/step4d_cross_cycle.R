@@ -2,14 +2,14 @@
 # STEP 4D: Cross-Cycle Generalization Check
 
 # Purpose: Step 3d's train/test split was a RANDOM split across the pooled
-# H+I+J data -- meaning the model could see people from the SAME cycle as
+# H+I+J data - meaning the model could see people from the SAME cycle as
 # the test set during training. This doesn't actually test whether the model
 # generalizes across TIME; it just tests generalization across a shuffled
 # sample of the same three years combined.
 #
 # This script runs the stricter, more honest version: train on cycles H+I
 # (2013-2014, 2015-2016) ONLY, then test on cycle J (2017-2018) ENTIRELY
-# held out -- a respondent in J was NEVER seen during training, regardless
+# held out - a respondent in J was NEVER seen during training, regardless
 # of how similar they might be to someone in H or I. This tests whether the
 # income/race sensitivity gaps are a stable property of the underlying
 # relationships, or whether they were partly an artifact of pooling/training
@@ -25,7 +25,7 @@ library(caret)
 library(pROC)
 
 if (!exists("pooled_df")) {
-  cat("pooled_df not found -- loading from saved CSV\n")
+  cat("pooled_df not found - loading from saved CSV\n")
   pooled_df <- read_csv("data/step3c_pooled_analytic_df.csv", show_col_types = FALSE) %>%
     mutate(
       sex = factor(sex), education = factor(education), marital_status = factor(marital_status),
@@ -50,7 +50,7 @@ cat(sprintf("Pooled data loaded: %d rows across cycles %s\n",
 train_df_temporal <- pooled_df %>% filter(cycle %in% c("H", "I"))
 test_df_temporal  <- pooled_df %>% filter(cycle == "J")
 
-cat(sprintf("\nTemporal split -- Train (H+I): %d rows | Test (J only, fully held out): %d rows\n",
+cat(sprintf("\nTemporal split - Train (H+I): %d rows | Test (J only, fully held out): %d rows\n",
             nrow(train_df_temporal), nrow(test_df_temporal)))
 
 cat("\nLabel balance check (confirms the known cycle drift from Step 3c):\n")
@@ -59,7 +59,7 @@ cat(sprintf("  Train (H+I) disability rate: %.1f%%\n",
 cat(sprintf("  Test (J) disability rate: %.1f%%\n",
             100 * mean(test_df_temporal$disability_label == "Yes")))
 cat("Note: if these rates differ notably, that's the cycle-drift effect\n")
-cat("already observed in Step 3c -- it makes this a GENUINELY harder test\n")
+cat("already observed in Step 3c - it makes this a GENUINELY harder test\n")
 cat("than the random split, since the model trains on one label distribution\n")
 cat("and is tested on a different one, exactly as a real deployed model\n")
 cat("would face in practice (trained on past data, applied to future data).\n")
@@ -110,7 +110,7 @@ roc_temporal <- roc(test_scored_temporal$disability_label, test_scored_temporal$
                     levels = c("No", "Yes"), direction = "<")
 cat(sprintf("\nAUC (trained H+I, tested on J): %.3f\n", auc(roc_temporal)))
 cat("Compare this directly against Step 3d's pooled-random-split AUC (0.852)\n")
-cat("-- a notable drop here would indicate the model partly relies on cycle-\n")
+cat("- a notable drop here would indicate the model partly relies on cycle-\n")
 cat("specific patterns rather than stable underlying relationships.\n")
 
 
@@ -142,21 +142,10 @@ print(income_temporal)
 # 5. DIRECT COMPARISON: random-split (Step 3d) vs. temporal-split (this script)
 
 # NOTE: paste in Step 3d's race/income FNR numbers manually below if you want
-# an automatic side-by-side table -- left as a manual step since those live
+# an automatic side-by-side table - left as a manual step since those live
 # in a different script's environment. The printed tables above are designed
 # to be visually compared against step3d_subgroup_race_pooled.csv /
 # step3d_subgroup_income_pooled.csv directly.
-
-cat("\n\nHow to read this for your paper:\n")
-cat("- If the income/race FNR gradient (richest/Asian respondents worst) is\n")
-cat("  STILL PRESENT here, under the strictest possible test (no cycle overlap\n")
-cat("  between train and test at all), that's your strongest possible general-\n")
-cat("  ization claim -- the pattern isn't a property of random-split pooling,\n")
-cat("  it holds when predicting genuinely unseen future respondents.\n")
-cat("- If overall AUC drops notably vs. Step 3d's 0.852, report that honestly --\n")
-cat("  it would mean some performance was inflated by cycle-specific patterns,\n")
-cat("  even if the SUBGROUP GAP itself still holds in relative terms.\n")
-
 
 # SAVE
 

@@ -1,7 +1,7 @@
 
 # STEP 3C: Multi-Cycle Pooling (2013-2014, 2015-2016, 2017-2018)
 
-# NOTE: 2011-2012 (cycle G) is EXCLUDED -- DLQ_G does not exist (confirmed via
+# NOTE: 2011-2012 (cycle G) is EXCLUDED - DLQ_G does not exist (confirmed via
 # Step 3b header discovery). Only H, I, J have the disability questionnaire.
 #
 # This script rebuilds Step 1's full pipeline (pull -> label -> features ->
@@ -10,13 +10,13 @@
 #
 # Harmonization notes baked in below, from the Step 3b header report:
 #   - RIDRETH3, DMDEDUC2, INDFMPIR, DLQ010-080, PFQ054, HIQ011, core MCQ
-#     columns: stable text/coding across H/I/J -- same recode logic as Step 1.
+#     columns: stable text/coding across H/I/J - same recode logic as Step 1.
 #   - HUQ010 (general health): same odd punctuation-in-label text across all
-#     three cycles -- same "Refused"/"Don't know" -> "Missing" fix as Step 1.
+#     three cycles - same "Refused"/"Don't know" -> "Missing" fix as Step 1.
 #   - HUQ051 (healthcare visits): bucket boundaries are NOT identical across
 #     cycles (I has an extra category vs J's 10). Harmonized below to the
 #     COARSEST common bucket set so no cycle has a category the others lack.
-#   - OCQ380 (work status): minor category-count differences across cycles --
+#   - OCQ380 (work status): minor category-count differences across cycles -
 #     harmonized to a common set; rare cycle-specific levels collapsed to
 #     "Other" rather than dropped, to avoid silently losing respondents.
 
@@ -34,7 +34,7 @@ cycles_to_pool <- c(H = "2013-2014", I = "2015-2016", J = "2017-2018")
 
 build_cycle_data <- function(suffix) {
   
-  cat(sprintf("\n--- Building cycle %s ---\n", suffix))
+  cat(sprintf("\n-- Building cycle %s --\n", suffix))
   
   demo <- nhanes(paste0("DEMO_", suffix))
   dlq  <- nhanes(paste0("DLQ_",  suffix))
@@ -44,10 +44,10 @@ build_cycle_data <- function(suffix) {
   huq  <- nhanes(paste0("HUQ_",  suffix))
   ocq  <- nhanes(paste0("OCQ_",  suffix))
   
-  cat(sprintf("  Rows pulled -- demo:%d dlq:%d pfq:%d mcq:%d hiq:%d huq:%d ocq:%d\n",
+  cat(sprintf("  Rows pulled - demo:%d dlq:%d pfq:%d mcq:%d hiq:%d huq:%d ocq:%d\n",
               nrow(demo), nrow(dlq), nrow(pfq), nrow(mcq), nrow(hiq), nrow(huq), nrow(ocq)))
   
-  # ---- LABEL: same 6-domain DLQ construction as Step 1 ----
+  # -- LABEL: same 6-domain DLQ construction as Step 1 --
   dlq_label <- dlq %>%
     clean_names() %>%
     select(seqn, dlq010, dlq020, dlq040, dlq050, dlq060, dlq080) %>%
@@ -70,7 +70,7 @@ build_cycle_data <- function(suffix) {
     ungroup() %>%
     select(seqn, disability_label, n_domains_yes, n_domains_answered)
   
-  # ---- DEMOGRAPHICS ----
+  # -- DEMOGRAPHICS --
   demo_feat <- demo %>%
     clean_names() %>%
     select(seqn, riagendr, ridageyr, ridreth3, dmdeduc2, dmdmartl,
@@ -87,7 +87,7 @@ build_cycle_data <- function(suffix) {
     mutate(
       race_eth_label = as.character(race_eth),
       # DMDHHSIZ comes back as FACTOR in some cycles (e.g. "7 or more people
-      # in the Household") rather than numeric -- harmonize by extracting the
+      # in the Household") rather than numeric - harmonize by extracting the
       # leading number, collapsing the "7 or more" text to 7
       household_size = case_when(
         str_detect(as.character(household_size), "^[0-9]+$") ~ as.numeric(as.character(household_size)),
@@ -96,7 +96,7 @@ build_cycle_data <- function(suffix) {
       )
     )
   
-  # ---- PFQ: special equipment only (same exclusion logic as Step 1) ----
+  # -- PFQ: special equipment only (same exclusion logic as Step 1) --
   pfq_feat <- pfq %>%
     clean_names() %>%
     select(seqn, pfq054) %>%
@@ -105,7 +105,7 @@ build_cycle_data <- function(suffix) {
            uses_special_equipment = ifelse(uses_special_equipment %in% c("Refused", "Don't know"),
                                            NA, uses_special_equipment))
   
-  # ---- MCQ: same 8 chronic condition columns, confirmed stable across H/I/J ----
+  # -- MCQ: same 8 chronic condition columns, confirmed stable across H/I/J --
   mcq_feat <- mcq %>%
     clean_names() %>%
     select(seqn, mcq010, mcq160a, mcq160b, mcq160c, mcq160f, mcq220, mcq160l, mcq160m) %>%
@@ -118,7 +118,7 @@ build_cycle_data <- function(suffix) {
     ungroup() %>%
     select(seqn, chronic_condition_count)
   
-  # ---- HIQ: insurance status ----
+  # -- HIQ: insurance status --
   hiq_feat <- hiq %>%
     clean_names() %>%
     select(seqn, hiq011) %>%
@@ -126,7 +126,7 @@ build_cycle_data <- function(suffix) {
     mutate(has_insurance = as.character(has_insurance),
            has_insurance = ifelse(has_insurance %in% c("Refused", "Don't know"), NA, has_insurance))
   
-  # ---- HUQ: general health (factor) + healthcare visits (HARMONIZED buckets) ----
+  # -- HUQ: general health (factor) + healthcare visits (HARMONIZED buckets) --
   # HUQ051 bucket harmonization: collapse to the coarsest common categories
   # across H/I/J so no cycle has a finer split the others lack.
   harmonize_visits <- function(x) {
@@ -174,7 +174,7 @@ build_cycle_data <- function(suffix) {
       )
     )
   
-  # ---- OCQ: work status (harmonized to a common category set) ----
+  # -- OCQ: work status (harmonized to a common category set) --
   # Rare cycle-specific categories not in the common set are collapsed to
   # "Other" rather than dropped, so respondents aren't silently lost.
   common_work_status <- c("Working at a job or business,", "Not working at a job or business?",
@@ -193,7 +193,7 @@ build_cycle_data <- function(suffix) {
                            "Other", work_status)
     )
   
-  # ---- MERGE ----
+  # -- MERGE --
   cycle_df <- demo_feat %>%
     left_join(pfq_feat, by = "seqn") %>%
     left_join(mcq_feat, by = "seqn") %>%
@@ -233,7 +233,7 @@ print(pooled_df %>% group_by(cycle) %>% summarise(pct_disability = mean(disabili
 
 
 # FINISH REMAINING CLEANUP (sex/education/marital_status factors, numeric
-# imputation, income_tier) -- SAME logic as Step 1, applied once to the
+# imputation, income_tier) - SAME logic as Step 1, applied once to the
 # pooled data
 
 
@@ -272,7 +272,7 @@ pooled_df <- pooled_df %>%
 
 cat(sprintf("\n\nFinal pooled analytic_df ready: %d rows, %d columns\n",
             nrow(pooled_df), ncol(pooled_df)))
-cat("Subgroup sizes (race), pooled -- compare to single-cycle Step 1 sizes:\n")
+cat("Subgroup sizes (race), pooled - compare to single-cycle Step 1 sizes:\n")
 print(table(pooled_df$race_eth_label))
 
 
@@ -280,7 +280,3 @@ print(table(pooled_df$race_eth_label))
 
 write_csv(pooled_df, "data/step3c_pooled_analytic_df.csv")
 cat("\nSaved: step3c_pooled_analytic_df.csv\n")
-cat("\nThis is now your `analytic_df` equivalent -- rename/assign it and feed it\n")
-cat("into Step 1's Section 6 onward (train/test split, model fit, subgroup\n")
-cat("scoring) exactly as before. The `cycle` column is retained in case you\n")
-cat("want to check for cycle-specific effects later.\n")

@@ -4,16 +4,16 @@
 # Purpose: your label is imbalanced (~30% Yes / 70% No). A naive 0.5
 # probability cutoff on imbalanced data is KNOWN to favor the majority class,
 # which could explain the low sensitivity (~52-57%) seen across all model
-# variants so far -- independent of whether there's a genuine signal-
+# variants so far - independent of whether there's a genuine signal-
 # availability problem in the data. This script checks whether the
 # SUBGROUP GAPS (the actual finding that matters for your paper) survive
 # once the threshold is chosen properly, rather than left at a naive 0.5.
 #
 # Two corrections tested:
 #   (1) Optimal threshold via Youden's J statistic (maximizes sensitivity +
-#       specificity - 1) -- the standard imbalance-aware threshold choice,
+#       specificity - 1) - the standard imbalance-aware threshold choice,
 #       computed from the ROC curve rather than assumed at 0.5.
-#   (2) Class-weighted Random Forest (classwt parameter) -- penalizes
+#   (2) Class-weighted Random Forest (classwt parameter) - penalizes
 #       misclassifying the minority class more heavily DURING TRAINING,
 #       a different fix than just moving the decision threshold post-hoc.
 #
@@ -26,8 +26,8 @@ library(randomForest)
 library(pROC)
 library(caret)
 
-stopifnot("rf_model not found -- re-run Step 1 first" = exists("rf_model"))
-stopifnot("test_scored not found -- re-run Step 1 first" = exists("test_scored"))
+stopifnot("rf_model not found - re-run Step 1 first" = exists("rf_model"))
+stopifnot("test_scored not found - re-run Step 1 first" = exists("test_scored"))
 
 cat(sprintf("Original label balance: %.1f%% Yes, %.1f%% No\n",
             100 * mean(test_scored$disability_label == "Yes"),
@@ -46,7 +46,7 @@ optimal_coords <- coords(roc_obj, "best", best.method = "youden",
 cat(sprintf("\n===== OPTIMAL THRESHOLD (Youden's J) =====\n"))
 cat(sprintf("Naive threshold: 0.500\n"))
 cat(sprintf("Optimal threshold: %.3f\n", optimal_coords$threshold))
-cat(sprintf("At optimal threshold -- Sensitivity: %.3f | Specificity: %.3f\n",
+cat(sprintf("At optimal threshold - Sensitivity: %.3f | Specificity: %.3f\n",
             optimal_coords$sensitivity, optimal_coords$specificity))
 
 # Re-derive predicted labels at the optimal threshold instead of 0.5
@@ -60,9 +60,9 @@ cat("\n===== OVERALL CONFUSION MATRIX AT OPTIMAL THRESHOLD =====\n")
 print(confusionMatrix(test_scored_corrected$predicted_label_corrected,
                        test_scored_corrected$disability_label, positive = "Yes"))
 
-# ----------------------------------------------------------------------------
-# Subgroup sensitivity at the CORRECTED threshold -- the key comparison
-# ----------------------------------------------------------------------------
+# --------------------------------------
+# Subgroup sensitivity at the CORRECTED threshold - the key comparison
+# --------------------------------------
 
 subgroup_sensitivity_corrected <- function(df, group_var, label_col) {
   df %>%
@@ -92,7 +92,7 @@ print(race_corrected)
 # CORRECTION 2: Class-weighted Random Forest (penalize minority-class errors
 # during training itself, not just post-hoc threshold adjustment)
 
-# classwt is set INVERSELY proportional to class frequency -- this tells
+# classwt is set INVERSELY proportional to class frequency - this tells
 # randomForest to weight a missed "Yes" case more heavily than a missed "No"
 # case during tree-building, addressing imbalance at the source rather than
 # the symptom.
@@ -103,7 +103,7 @@ class_weights <- class_weights / sum(class_weights) * 2
 names(class_weights) <- c("No", "Yes")  # force clean names, just in case
 
 cat(sprintf("\n===== CLASS-WEIGHTED MODEL =====\n"))
-cat(sprintf("Class weights -- No: %.4f | Yes: %.4f\n", class_weights["No"], class_weights["Yes"]))
+cat(sprintf("Class weights - No: %.4f | Yes: %.4f\n", class_weights["No"], class_weights["Yes"]))
 
 rf_model_weighted <- randomForest(
   disability_label ~ .,
@@ -181,12 +181,3 @@ write_csv(comparison_race_thresholds, "data/step3a_imbalance_check_race.csv")
 cat("\n\nStep 3a complete. Files saved:\n")
 cat("  - step3a_imbalance_check_income.csv\n")
 cat("  - step3a_imbalance_check_race.csv\n")
-cat("\nHow to read this for your paper:\n")
-cat("- If the RELATIVE GAP between subgroups (e.g. richest vs poorest FNR)\n")
-cat("  shrinks substantially under optimal-threshold or class-weighted\n")
-cat("  correction, the original gap was partly a naive-threshold artifact --\n")
-cat("  report the corrected numbers as your headline finding instead.\n")
-cat("- If the gap persists at similar magnitude across all three approaches,\n")
-cat("  that's strong evidence the disparity is a genuine signal-availability\n")
-cat("  problem in the correlates themselves, not a fixable threshold choice --\n")
-cat("  this is the stronger claim for your paper if it holds.\n")

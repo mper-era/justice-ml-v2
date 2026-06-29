@@ -14,7 +14,7 @@
 
 library(tidyverse)
 
-stopifnot("test_scored_pooled not found -- re-run step3d_refit_pooled.R first" =
+stopifnot("test_scored_pooled not found - re-run step3d_refit_pooled.R first" =
             exists("test_scored_pooled"))
 
 cat(sprintf("Loaded test_scored_pooled: %d rows\n", nrow(test_scored_pooled)))
@@ -128,10 +128,6 @@ cat(sprintf("Pearson correlation (race subgroups, pooled): r = %.3f\n", race_cor
 income_corr_pooled <- cor(comparison_income$rule_a_harm_rate, comparison_income$rule_b_harm_rate,
                           use = "complete.obs")
 cat(sprintf("Pearson correlation (income tiers, pooled): r = %.3f\n", income_corr_pooled))
-
-cat("\nCompare these r-values directly against your single-cycle Step 2 result\n")
-cat("(r = -0.783 for race, strongly negative for income) to see if the harm-\n")
-cat("inversion finding holds on the larger, pooled sample.\n")
 
 
 # SAVE

@@ -3,7 +3,7 @@
 
 # Loads the pooled dataset from Step 3c and re-runs the full Step 1 + Step 1B
 # pipeline on it: train/test split, Random Forest fit, subgroup scoring,
-# XGBoost robustness check, and bootstrap confidence intervals -- all on the
+# XGBoost robustness check, and bootstrap confidence intervals - all on the
 # ~3x larger, race-subgroup-richer pooled data instead of single-cycle J.
 #
 # PREREQUISITE: run step3c_pool_cycles.R first, OR load the saved CSV below.
@@ -20,7 +20,7 @@ library(Matrix)
 # 0. LOAD POOLED DATA
 
 if (!exists("pooled_df")) {
-  cat("pooled_df not found in memory -- loading from saved CSV\n")
+  cat("pooled_df not found in memory - loading from saved CSV\n")
   pooled_df <- read_csv("data/step3c_pooled_analytic_df.csv", show_col_types = FALSE)
   
   # Re-apply factor typing lost on CSV round-trip
@@ -59,7 +59,7 @@ test_df   <- pooled_df[-train_idx, ]
 cat(sprintf("\nTrain n = %d | Test n = %d\n", nrow(train_df), nrow(test_df)))
 
 
-# 2. RANDOM FOREST -- same feature set as Step 1
+# 2. RANDOM FOREST - same feature set as Step 1
 
 feature_cols <- c("sex", "age", "race_eth_label", "education", "marital_status",
                   "poverty_ratio", "household_size", "uses_special_equipment",
@@ -79,7 +79,7 @@ test_model_df <- test_df %>% select(disability_label, all_of(feature_cols), seqn
                                       levels = levels(train_model_df$n_healthcare_visits_12mo), ordered = TRUE)
   )
 
-cat("\nFitting Random Forest on pooled data (this will take longer than single-cycle -- 3x the rows)...\n")
+cat("\nFitting Random Forest on pooled data (this will take longer than single-cycle - 3x the rows)...\n")
 rf_model_pooled <- randomForest(
   disability_label ~ .,
   data = train_model_df,
@@ -103,9 +103,9 @@ roc_pooled <- roc(test_scored_pooled$disability_label, test_scored_pooled$predic
                   levels = c("No", "Yes"), direction = "<")
 cat(sprintf("\nOverall AUC (pooled): %.3f\n", auc(roc_pooled)))
 
-# ----------------------------------------------------------------------------
-# Subgroup tables -- the main payoff of pooling: tighter race estimates
-# ----------------------------------------------------------------------------
+# --------------------------------------
+# Subgroup tables - the main payoff of pooling: tighter race estimates
+# --------------------------------------
 subgroup_accuracy <- function(df, group_var) {
   df %>%
     group_by(.data[[group_var]]) %>%
@@ -132,7 +132,7 @@ print(income_pooled)
 
 # 3. XGBOOST ROBUSTNESS CHECK ON POOLED DATA
 
-cat("\n\n--- XGBoost on pooled data ---\n")
+cat("\n\n-- XGBoost on pooled data --\n")
 
 train_xgb_df <- train_df %>% select(all_of(feature_cols), disability_label) %>%
   mutate(across(where(is.factor), as.factor))
@@ -181,9 +181,9 @@ print(subgroup_accuracy(test_xgb_scored, "income_tier"))
 
 # 4. BOOTSTRAP CIs ON POOLED DATA (500 iterations, same as single-cycle)
 
-cat("\n\n--- Bootstrap CIs on pooled data (500 iterations -- larger n means each\n")
+cat("\n\n-- Bootstrap CIs on pooled data (500 iterations - larger n means each\n")
 cat("    fit takes longer than single-cycle, but CIs should be substantially\n")
-cat("    tighter, especially for race subgroups) ---\n")
+cat("    tighter, especially for race subgroups) --\n")
 
 N_BOOTSTRAP <- 2000
 

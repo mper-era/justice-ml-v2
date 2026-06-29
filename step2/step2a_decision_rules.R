@@ -7,30 +7,30 @@
 #   predicted_prob_yes and true disability_label) and applies TWO contrasting
 #   decision rules that mirror real institutional uses of a disability proxy:
 #
-#   RULE A -- Outreach-prioritization (barrier-removing)
+#   RULE A - Outreach-prioritization (barrier-removing)
 #     Logic: cast a wide net; missing someone who needs help is the bigger
 #     harm. LOW threshold (flag top 75% by predicted probability, i.e.
 #     anyone above the 25th percentile). The harm of concern: FALSE
-#     NEGATIVES -- people with real disability who never get flagged for
+#     NEGATIVES - people with real disability who never get flagged for
 #     outreach/support and fall through the cracks.
 #
-#   RULE B -- Utilization-review-flagging (barrier-imposing)
+#   RULE B - Utilization-review-flagging (barrier-imposing)
 #     Logic: only flag people the model is quite confident about; wrongly
 #     flagging someone for review is itself a burden. HIGH threshold (flag
 #     only top 25% by predicted probability, i.e. above the 75th
-#     percentile). The harm of concern: FALSE POSITIVES -- people without
+#     percentile). The harm of concern: FALSE POSITIVES - people without
 #     a disability (or unfairly suspected) who get dragged into burdensome
 #     review.
 #
 #   For each rule, we identify the MISMATCH POPULATION (people the proxy
 #   gets wrong in the harm-relevant direction) and cross-tabulate against
-#   race, income tier, and education -- this answers: does proxy error
+#   race, income tier, and education - this answers: does proxy error
 #   concentrate on the same populations under both directions of use, or
 #   does the harm shift depending on what the proxy is used for?
 #
 # PREREQUISITE: requires `test_scored` in your environment, produced by
 # nhanes_disability_step1.R. If you've closed RStudio since then, re-source
-# that script first (or load test_scored from the saved CSV -- see Section 0).
+# that script first (or load test_scored from the saved CSV - see Section 0).
 
 
 library(tidyverse)
@@ -46,7 +46,7 @@ library(janitor)
 #   mutate(disability_label = factor(disability_label, levels = c("No", "Yes")),
 #          predicted_label   = factor(predicted_label, levels = c("No", "Yes")))
 
-stopifnot("test_scored not found -- re-source Step 1 or load from CSV (see Section 0)" =
+stopifnot("test_scored not found - re-source Step 1 or load from CSV (see Section 0)" =
             exists("test_scored"))
 stopifnot("predicted_prob_yes column missing from test_scored" =
             "predicted_prob_yes" %in% names(test_scored))
@@ -73,12 +73,12 @@ cat(sprintf("  75th percentile of predicted probability: %.3f\n", q75))
 
 decision_df <- test_scored %>%
   mutate(
-    # RULE A: Outreach-prioritization -- flag anyone ABOVE the 25th percentile
+    # RULE A: Outreach-prioritization - flag anyone ABOVE the 25th percentile
     # (i.e. exclude only the bottom quartile of predicted probability).
     # Wide net, low bar to be flagged for outreach.
     flagged_outreach = predicted_prob_yes > q25,
     
-    # RULE B: Utilization-review-flagging -- flag only the TOP quartile
+    # RULE B: Utilization-review-flagging - flag only the TOP quartile
     # (above the 75th percentile). Narrow net, high bar to be flagged for review.
     flagged_review = predicted_prob_yes > q75
   )
@@ -93,11 +93,11 @@ cat(sprintf("Rule B (review) flags %d / %d people (%.1f%%)\n",
 
 # 2. IDENTIFY THE HARM-RELEVANT MISMATCH POPULATION FOR EACH RULE
 
-# RULE A's harm of concern: FALSE NEGATIVES under the outreach rule --
+# RULE A's harm of concern: FALSE NEGATIVES under the outreach rule -
 #   true disability_label == "Yes" but flagged_outreach == FALSE.
 #   These are people who needed outreach and didn't get it.
 #
-# RULE B's harm of concern: FALSE POSITIVES under the review rule --
+# RULE B's harm of concern: FALSE POSITIVES under the review rule -
 #   true disability_label == "No" but flagged_review == TRUE.
 #   These are people wrongly dragged into burdensome review.
 
@@ -112,13 +112,13 @@ n_true_nondisabled <- sum(decision_df$disability_label == "No")
 
 cat(sprintf("\n===== RULE A: Outreach-Prioritization =====\n"))
 cat(sprintf("Of %d people who TRULY have a disability:\n", n_true_disabled))
-cat(sprintf("  %d (%.1f%%) were missed by the outreach flag -- the harm population\n",
+cat(sprintf("  %d (%.1f%%) were missed by the outreach flag - the harm population\n",
             sum(decision_df$rule_a_missed_outreach),
             100 * sum(decision_df$rule_a_missed_outreach) / n_true_disabled))
 
 cat(sprintf("\n===== RULE B: Utilization-Review-Flagging =====\n"))
 cat(sprintf("Of %d people who TRULY do NOT have a disability:\n", n_true_nondisabled))
-cat(sprintf("  %d (%.1f%%) were wrongly flagged for review -- the harm population\n",
+cat(sprintf("  %d (%.1f%%) were wrongly flagged for review - the harm population\n",
             sum(decision_df$rule_b_wrongly_flagged),
             100 * sum(decision_df$rule_b_wrongly_flagged) / n_true_nondisabled))
 
@@ -178,7 +178,7 @@ print(rule_b_education)
 # Joins Rule A and Rule B harm rates side by side per group, so you can see
 # directly whether (e.g.) the group most harmed by under-outreach is ALSO
 # the group most harmed by over-flagging, or whether these are different
-# populations entirely -- this is the central empirical question of Step 2.
+# populations entirely - this is the central empirical question of Step 2.
 
 cat("\n\n===== SIDE-BY-SIDE COMPARISON: RACE =====\n")
 comparison_race <- rule_a_race %>%
@@ -219,11 +219,11 @@ print(comparison_education)
 
 # A positive correlation = harm concentrates on the same groups regardless of
 # institutional purpose (the proxy is just bad for them, full stop).
-# A weak/negative correlation = harm DEPENDS on what the proxy is used for --
+# A weak/negative correlation = harm DEPENDS on what the proxy is used for -
 # a group well-served by one use case could be poorly served by the other.
 
 cat("\n\n===== CORRELATION: Rule A harm rate vs. Rule B harm rate, by group =====\n")
-cat("(Across race subgroups -- income/education have too few groups for a\n")
+cat("(Across race subgroups - income/education have too few groups for a\n")
 cat(" meaningful correlation, but the side-by-side tables above let you eyeball it.)\n\n")
 
 race_corr <- cor(comparison_race$rule_a_harm_rate, comparison_race$rule_b_harm_rate,
@@ -232,7 +232,7 @@ cat(sprintf("Pearson correlation (race subgroups): r = %.3f\n", race_corr))
 cat("Interpretation guide:\n")
 cat("  r close to +1: harm concentrates on the same groups under both rules\n")
 cat("  r close to 0 or negative: harm shifts to DIFFERENT groups depending on\n")
-cat("    how the proxy is used -- a group protected under one use case may be\n")
+cat("    how the proxy is used - a group protected under one use case may be\n")
 cat("    exposed under the other\n")
 
 
@@ -248,6 +248,6 @@ cat("  - step2_decision_rule_row_level.csv   (every person, both rules, both har
 cat("  - step2_comparison_race.csv           (Rule A vs Rule B harm rate by race)\n")
 cat("  - step2_comparison_income.csv         (Rule A vs Rule B harm rate by income)\n")
 cat("  - step2_comparison_education.csv      (Rule A vs Rule B harm rate by education)\n")
-cat("\nThe race/income/education comparison tables are your core Step 2 result --\n")
+cat("\nThe race/income/education comparison tables are your core Step 2 result -\n")
 cat("they show concretely who is helped or harmed by each institutional use of\n")
 cat("this proxy, and whether that harm shifts depending on purpose.\n")

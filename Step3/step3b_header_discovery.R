@@ -10,7 +10,7 @@
 # REAL information instead of assumptions.
 #
 # Cycles covered: 2011-2012 (G), 2013-2014 (H), 2015-2016 (I), 2017-2018 (J)
-# (2019-2020 is excluded -- that cycle was disrupted by COVID and NHANES
+# (2019-2020 is excluded - that cycle was disrupted by COVID and NHANES
 # combined it with a partial 2017-2020 file with different methodology;
 # better to leave it out unless you specifically want to investigate that
 # disruption as its own angle later.)
@@ -46,7 +46,7 @@ for (suffix in names(cycles)) {
   for (tbl_prefix in tables_needed) {
     tbl_name <- paste0(tbl_prefix, "_", suffix)
 
-    add_line("\n---- %s ----", tbl_name)
+    add_line("\n-- %s --", tbl_name)
 
     result <- tryCatch({
       dat <- nhanes(tbl_name)
@@ -66,7 +66,7 @@ for (suffix in names(cycles)) {
     add_line("  Column names: %s", paste(names(dat), collapse = ", "))
 
     # For each column, report its class and (if factor/character) a preview
-    # of unique values -- this is what catches the "text labels instead of
+    # of unique values - this is what catches the "text labels instead of
     # numeric codes" problem we kept hitting in Step 1, before it becomes a
     # debugging session instead of a known fact going into script-writing.
     add_line("\n  Column details:")
@@ -90,6 +90,3 @@ writeLines(output_lines, "nhanes_cycle_header_report.txt")
 
 cat(sprintf("\n\nDone. Report written to: nhanes_cycle_header_report.txt\n"))
 cat(sprintf("Total lines: %d\n", length(output_lines)))
-cat("\nSend this file back and the pooling/harmonization script will be built\n")
-cat("directly from the real variable structure across all 4 cycles, rather\n")
-cat("than guessing at names and fixing errors one at a time.\n")

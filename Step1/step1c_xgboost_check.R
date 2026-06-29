@@ -3,7 +3,7 @@
 
 # Purpose: confirm the income/race sensitivity gap found by Random Forest
 # isn't an artifact of that specific algorithm. Uses the SAME train_df/test_df
-# objects already built by nhanes_disability_step1.R -- no data re-cleaning.
+# objects already built by nhanes_disability_step1.R - no data re-cleaning.
 # Run this AFTER sourcing the full step1 script (train_df/test_df must exist).
 
 
@@ -21,7 +21,7 @@ feature_cols_xgb <- c("sex", "age", "race_eth_label", "education", "marital_stat
                       "health_worse_than_last_yr", "has_usual_healthcare_place",
                       "n_healthcare_visits_12mo", "work_status")
 
-# xgboost needs numeric matrices, not factors -- one-hot encode via model.matrix
+# xgboost needs numeric matrices, not factors - one-hot encode via model.matrix
 train_xgb_df <- train_df %>% select(all_of(feature_cols_xgb), disability_label) %>%
   mutate(across(where(is.factor), as.factor))
 
@@ -29,7 +29,7 @@ test_xgb_df <- test_df %>% select(all_of(feature_cols_xgb), disability_label, se
   mutate(across(where(is.factor), as.factor))
 
 # Align factor levels between train/test before one-hot encoding (same issue
-# we hit with randomForest -- xgboost has the same requirement)
+# we hit with randomForest - xgboost has the same requirement)
 for (col in feature_cols_xgb) {
   if (is.factor(train_xgb_df[[col]])) {
     test_xgb_df[[col]] <- factor(test_xgb_df[[col]], levels = levels(train_xgb_df[[col]]))
@@ -47,7 +47,7 @@ test_label_xgb  <- as.numeric(test_xgb_df$disability_label) - 1
 dtrain <- xgb.DMatrix(data = train_matrix, label = train_label_xgb)
 dtest  <- xgb.DMatrix(data = test_matrix, label = test_label_xgb)
 
-# Default-ish settings -- this is a robustness check, not a tuning exercise
+# Default-ish settings - this is a robustness check, not a tuning exercise
 xgb_model <- xgb.train(
   params = list(objective = "binary:logistic", eval_metric = "auc",
                 max_depth = 6, eta = 0.1),
