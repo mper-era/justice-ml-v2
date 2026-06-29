@@ -1,0 +1,25 @@
+income_tier,n,false_negative_rate,domain
+Below poverty line,905,1,hearing_difficulty
+Above 4x poverty line,1023,0.9782608695652174,hearing_difficulty
+Near poverty (1-2x),1167,0.9508196721311475,hearing_difficulty
+Middle (2-4x),1637,0.9421487603305785,hearing_difficulty
+Above 4x poverty line,1035,1,vision_difficulty
+Near poverty (1-2x),1107,0.9875,vision_difficulty
+Below poverty line,939,0.98,vision_difficulty
+Middle (2-4x),1649,0.9743589743589743,vision_difficulty
+Above 4x poverty line,1025,0.9795918367346939,concentration_difficulty
+Near poverty (1-2x),1135,0.9299363057324841,concentration_difficulty
+Middle (2-4x),1629,0.9166666666666666,concentration_difficulty
+Below poverty line,940,0.880794701986755,concentration_difficulty
+Above 4x poverty line,948,0.5138888888888888,mobility_difficulty
+Near poverty (1-2x),1147,0.44897959183673475,mobility_difficulty
+Middle (2-4x),1662,0.4068627450980392,mobility_difficulty
+Below poverty line,975,0.4,mobility_difficulty
+Below poverty line,960,0.8405797101449275,selfcare_difficulty
+Middle (2-4x),1590,0.8194444444444444,selfcare_difficulty
+Above 4x poverty line,1009,0.8181818181818181,selfcare_difficulty
+Near poverty (1-2x),1173,0.7888888888888889,selfcare_difficulty
+Below poverty line,907,0.7622950819672132,errands_difficulty
+Above 4x poverty line,1043,0.7560975609756098,errands_difficulty
+Near poverty (1-2x),1130,0.7027027027027026,errands_difficulty
+Middle (2-4x),1651,0.6666666666666667,errands_difficulty

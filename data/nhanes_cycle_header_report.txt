@@ -1,0 +1,1083 @@
+============================================================
+NHANES MULTI-CYCLE HEADER REPORT
+Generated: 2026-06-27 02:19:04.613929
+============================================================
+
+
+############################################################
+CYCLE: 2011-2012 (suffix _G)
+############################################################
+
+---- DEMO_G ----
+  Rows: 9756 | Columns: 48
+  Column names: SEQN, SDDSRVYR, RIDSTATR, RIAGENDR, RIDAGEYR, RIDAGEMN, RIDRETH1, RIDRETH3, RIDEXMON, RIDEXAGY, RIDEXAGM, DMQMILIZ, DMQADFC, DMDBORN4, DMDCITZN, DMDYRSUS, DMDEDUC3, DMDEDUC2, DMDMARTL, RIDEXPRG, SIALANG, SIAPROXY, SIAINTRP, FIALANG, FIAPROXY, FIAINTRP, MIALANG, MIAPROXY, MIAINTRP, AIALANGA, WTINT2YR, WTMEC2YR, SDMVPSU, SDMVSTRA, INDHHIN2, INDFMIN2, INDFMPIR, DMDHHSIZ, DMDFMSIZ, DMDHHSZA, DMDHHSZB, DMDHHSZE, DMDHRGND, DMDHRAGE, DMDHRBR4, DMDHREDU, DMDHRMAR, DMDHSEDU
+
+  Column details:
+    SEQN                 [numeric] range: 62161 to 71916
+    SDDSRVYR             [factor] values: NHANES 2011-2012 public release
+    RIDSTATR             [factor] values: Both interviewed and MEC examined | Interviewed only
+    RIAGENDR             [factor] values: Male | Female
+    RIDAGEYR             [numeric] range: 0 to 80
+    RIDAGEMN             [numeric] range: 0 to 24
+    RIDRETH1             [factor] values: Non-Hispanic White | Mexican American | Other Race - Including Multi-Racial | Non-Hispanic Black | Other Hispanic
+    RIDRETH3             [factor] values: Non-Hispanic White | Mexican American | Non-Hispanic Asian | Non-Hispanic Black | Other Race - Including Multi-Racial | Other Hispanic
+    RIDEXMON             [factor] values: May 1 through October 31 | November 1 through April 30 | NA
+    RIDEXAGY             [numeric] range: 2 to 20
+    RIDEXAGM             [numeric] range: 0 to 239
+    DMQMILIZ             [factor] values: No | NA | Yes
+    DMQADFC              [factor] values: NA | No | Yes | Don't Know
+    DMDBORN4             [factor] values: Born in 50 US states or Washington, DC | Others | Don't Know | Refused
+    DMDCITZN             [factor] values: Citizen by birth or naturalization | Not a citizen of the US | Refused | NA
+    DMDYRSUS             [factor] values: NA | 5 year or more, but less than 10 years | 10 year or more, but less than 15 years | 30 year or more, but less than 40 years | 1 year or more, but less than 5 years | Refused | 20 year or more, but less than 30 years | 50 years or more | ... (12 total)
+    DMDEDUC3             [factor] values: NA | 8th grade | 7th grade | 3rd grade | Never attended / kindergarten only | 9th grade | 10th grade | 6th grade | ... (19 total)
+    DMDEDUC2             [factor] values: High school graduate/GED or equivalent | NA | Some college or AA degree | College graduate or above | 9-11th grade (Includes 12th grade with no diploma) | Less than 9th grade | Refused | Don't Know
+    DMDMARTL             [factor] values: Never married | NA | Married | Widowed | Divorced | Living with partner | Separated | Refused | ... (9 total)
+    RIDEXPRG             [factor] values: NA | The participant was not pregnant at exam | Cannot ascertain if the participant is pregnant at exam | Yes, positive lab pregnancy test or self-reported pregnant at exam
+    SIALANG              [factor] values: English | Spanish
+    SIAPROXY             [factor] values: Yes | No | NA
+    SIAINTRP             [factor] values: No | Yes
+    FIALANG              [factor] values: English | NA | Spanish
+    FIAPROXY             [factor] values: No | NA | Yes
+    FIAINTRP             [factor] values: No | Yes | NA
+    MIALANG              [factor] values: English | NA | Spanish
+    MIAPROXY             [factor] values: No | NA | Yes
+    MIAINTRP             [factor] values: No | NA | Yes
+    AIALANGA             [factor] values: English | NA | Spanish | Asian languages
+    WTINT2YR             [numeric] range: 3320.8855 to 220233.315202
+    WTMEC2YR             [numeric] range: 0 to 222579.783434
+    SDMVPSU              [numeric] range: 1 to 3
+    SDMVSTRA             [numeric] range: 90 to 103
+    INDHHIN2             [factor] values: $75,000 to $99,999 | $15,000 to $19,999 | $100,000 and Over | $45,000 to $54,999 | Refused | Don't know | $ 5,000 to $ 9,999 | $55,000 to $64,999 | ... (17 total)
+    INDFMIN2             [factor] values: $75,000 to $99,999 | $15,000 to $19,999 | $100,000 and Over | $45,000 to $54,999 | Refused | $ 5,000 to $ 9,999 | $55,000 to $64,999 | $20,000 to $24,999 | ... (17 total)
+    INDFMPIR             [numeric] range: 0 to 5
+    DMDHHSIZ             [numeric] range: 1 to 7
+    DMDFMSIZ             [numeric] range: 1 to 7
+    DMDHHSZA             [numeric] range: 0 to 3
+    DMDHHSZB             [numeric] range: 0 to 4
+    DMDHHSZE             [numeric] range: 0 to 3
+    DMDHRGND             [factor] values: Female | Male
+    DMDHRAGE             [numeric] range: 18 to 80
+    DMDHRBR4             [factor] values: Born in 50 US states or Washington, DC | Others | NA | Don't Know | Refused
+    DMDHREDU             [factor] values: College Graduate or above | High School Grad/GED or Equivalent | Some College or AA degree | 9-11th Grade (Includes 12th grade with no diploma) | Less Than 9th Grade | Don't Know | NA | Refused
+    DMDHRMAR             [factor] values: Married | Living with partner | Refused | Separated | Never married | Widowed | Divorced | NA | ... (9 total)
+    DMDHSEDU             [factor] values: College Graduate or above | NA | Some College or AA degree | High School Grad/GED or Equivalent | 9-11th Grade (Includes 12th grade with no diploma) | Less Than 9th Grade | Don't Know
+
+---- DLQ_G ----
+  Column names: 
+
+  Column details:
+
+---- PFQ_G ----
+  Rows: 8350 | Columns: 35
+  Column names: SEQN, PFQ020, PFQ030, PFQ041, PFQ049, PFQ051, PFQ054, PFQ057, PFQ059, PFQ061A, PFQ061B, PFQ061C, PFQ061D, PFQ061E, PFQ061F, PFQ061G, PFQ061H, PFQ061I, PFQ061J, PFQ061K, PFQ061L, PFQ061M, PFQ061N, PFQ061O, PFQ061P, PFQ061Q, PFQ061R, PFQ061S, PFQ061T, PFQ063A, PFQ063B, PFQ063C, PFQ063D, PFQ063E, PFQ090
+
+  Column details:
+    SEQN                 [numeric] range: 62161 to 71916
+    PFQ020               [factor] values: NA | No | Yes | Don't know
+    PFQ030               [factor] values: NA | Yes | No | Don't know
+    PFQ041               [factor] values: NA | No | Yes | Don't know
+    PFQ049               [factor] values: Yes | NA | No | Refused
+    PFQ051               [factor] values: Yes | NA | No | Don't know | Refused
+    PFQ054               [factor] values: No | NA | Yes | Refused
+    PFQ057               [factor] values: No | NA | Yes | Don't know | Refused
+    PFQ059               [factor] values: NA | No | Yes | Don't know | Refused
+    PFQ061A              [factor] values: Do not do this activity | NA | No difficulty | Unable to do | Much difficulty | Some difficulty | Refused
+    PFQ061B              [factor] values: No difficulty | NA | Much difficulty | Unable to do | Some difficulty | Do not do this activity | Refused
+    PFQ061C              [factor] values: No difficulty | NA | Much difficulty | Some difficulty | Unable to do | Do not do this activity | Don't know | Refused
+    PFQ061D              [factor] values: No difficulty | NA | Much difficulty | Some difficulty | Do not do this activity | Unable to do | Refused
+    PFQ061E              [factor] values: No difficulty | NA | Some difficulty | Unable to do | Much difficulty | Do not do this activity | Don't know | Refused
+    PFQ061F              [factor] values: Do not do this activity | NA | Some difficulty | No difficulty | Much difficulty | Unable to do | Refused
+    PFQ061G              [factor] values: Do not do this activity | NA | No difficulty | Some difficulty | Unable to do | Much difficulty | Refused
+    PFQ061H              [factor] values: No difficulty | NA | Unable to do | Some difficulty | Much difficulty | Do not do this activity | Don't know | Refused
+    PFQ061I              [factor] values: No difficulty | NA | Much difficulty | Unable to do | Some difficulty | Do not do this activity | Refused
+    PFQ061J              [factor] values: No difficulty | NA | Some difficulty | Unable to do | Much difficulty | Do not do this activity | Refused
+    PFQ061K              [factor] values: No difficulty | NA | Much difficulty | Some difficulty | Unable to do | Do not do this activity | Refused
+    PFQ061L              [factor] values: Some difficulty | NA | No difficulty | Much difficulty | Unable to do | Do not do this activity | Refused
+    PFQ061M              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity | Don't know | Refused
+    PFQ061N              [factor] values: No difficulty | NA | Some difficulty | Unable to do | Much difficulty | Do not do this activity | Don't know | Refused
+    PFQ061O              [factor] values: No difficulty | NA | Unable to do | Some difficulty | Much difficulty | Do not do this activity | Refused
+    PFQ061P              [factor] values: No difficulty | NA | Unable to do | Some difficulty | Much difficulty | Do not do this activity | Refused
+    PFQ061Q              [factor] values: Do not do this activity | NA | No difficulty | Unable to do | Much difficulty | Some difficulty | Refused
+    PFQ061R              [factor] values: Do not do this activity | NA | No difficulty | Unable to do | Much difficulty | Some difficulty | Refused
+    PFQ061S              [factor] values: No difficulty | NA | Unable to do | Some difficulty | Much difficulty | Do not do this activity | Refused
+    PFQ061T              [factor] values: Do not do this activity | NA | No difficulty | Some difficulty | Unable to do | Much difficulty | Don't know | Refused
+    PFQ063A              [factor] values: Other impairment/problem | NA | Lung/breathing problem | Arthritis/rheumatism | Back or neck problem | Depression/anxiety/emotional problem | Fractures, bone/joint injury | Heart problem | ... (22 total)
+    PFQ063B              [factor] values: NA | Arthritis/rheumatism | Back or neck problem | Cancer | Diabetes | Hypertension/high blood pressure | Weight problem | Depression/anxiety/emotional problem | ... (20 total)
+    PFQ063C              [factor] values: NA | Hypertension/high blood pressure | Diabetes | Weight problem | Back or neck problem | Other impairment/problem | Hearing problem | Arthritis/rheumatism | ... (20 total)
+    PFQ063D              [factor] values: NA | Hypertension/high blood pressure | Other impairment/problem | Vision/problem seeing | Fractures, bone/joint injury | Heart problem | Arthritis/rheumatism | Weight problem | ... (17 total)
+    PFQ063E              [factor] values: NA | Vision/problem seeing | Hypertension/high blood pressure | Lung/breathing problem | Stroke problem | Other impairment/problem | Depression/anxiety/emotional problem | Weight problem | ... (17 total)
+    PFQ090               [factor] values: No | NA | Yes | Refused
+
+---- MCQ_G ----
+  Rows: 9364 | Columns: 92
+  Column names: SEQN, MCQ010, MCQ025, MCQ035, MCQ040, MCQ050, MCQ051, MCQ053, MCQ070, MCQ075, MCQ080, MCQ082, MCQ084, MCQ086, MCQ092, MCD093, MCQ140, MCQ149, MCQ160A, MCQ180A, MCQ195, MCQ160N, MCQ180N, MCQ160B, MCQ180B, MCQ160C, MCQ180C, MCQ160D, MCQ180D, MCQ160E, MCQ180E, MCQ160F, MCQ180F, MCQ160G, MCQ180G, MCQ160M, MCQ170M, MCQ180M, MCQ160K, MCQ170K, MCQ180K, MCQ160L, MCQ170L, MCQ180L, MCQ220, MCQ230A, MCQ230B, MCQ230C, MCQ230D, MCQ240A, MCQ240AA, MCQ240B, MCQ240BB, MCQ240C, MCQ240CC, MCQ240D, MCQ240DD, MCQ240DK, MCQ240E, MCQ240F, MCQ240G, MCQ240H, MCQ240I, MCQ240J, MCQ240K, MCQ240L, MCQ240M, MCQ240N, MCQ240O, MCQ240P, MCQ240Q, MCQ240R, MCQ240S, MCQ240T, MCQ240U, MCQ240V, MCQ240W, MCQ240X, MCQ240Y, MCQ240Z, MCQ300A, MCQ300B, MCQ300C, MCQ365A, MCQ365B, MCQ365C, MCQ365D, MCQ370A, MCQ370B, MCQ370C, MCQ370D, MCQ380
+
+  Column details:
+    SEQN                 [numeric] range: 62161 to 71916
+    MCQ010               [factor] values: No | Yes | Don't know | NA | Refused
+    MCQ025               [numeric] range: 1 to 99999
+    MCQ035               [factor] values: NA | No | Yes | Don't know
+    MCQ040               [factor] values: NA | Yes | No | Don't know
+    MCQ050               [factor] values: NA | Yes | No
+    MCQ051               [factor] values: NA | Yes | No | Don't know
+    MCQ053               [factor] values: No | Yes | Don't know | NA | Refused
+    MCQ070               [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ075               [factor] values: NA | little or no psoriasis, | only a few patches (that could be covered 
+by one or two palms of {your/his/her} 
+hand), | extensive psoriasis (covering large areas of 
+the body, that would be more than ten 
+palms of {your/his/her} hand)? | scattered patches (that could be covered 
+between three and ten palms of {your/ 
+his/her} hand), or | Don't know
+    MCQ080               [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ082               [factor] values: No | NA | Don't know | Yes | Refused
+    MCQ084               [factor] values: NA | No | Yes | Don't know | Refused
+    MCQ086               [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ092               [factor] values: No | NA | Yes | Don't know | Refused
+    MCD093               [factor] values: NA | 1992 to present | Before 1972 | 1972 - 1991 | Don't know
+    MCQ140               [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ149               [factor] values: NA | No | Yes | Don't know | Refused
+    MCQ160A              [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ180A              [numeric] range: 0 to 99999
+    MCQ195               [factor] values: NA | Osteoarthritis or degenerative arthritis | Rheumatoid arthritis | Don't know | Other | Psoriatic arthritis
+    MCQ160N              [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ180N              [numeric] range: 9 to 99999
+    MCQ160B              [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ180B              [numeric] range: 0 to 99999
+    MCQ160C              [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ180C              [numeric] range: 5 to 99999
+    MCQ160D              [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ180D              [numeric] range: 16 to 99999
+    MCQ160E              [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ180E              [numeric] range: 1 to 99999
+    MCQ160F              [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ180F              [numeric] range: 0 to 99999
+    MCQ160G              [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ180G              [numeric] range: 10 to 99999
+    MCQ160M              [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ170M              [factor] values: NA | Yes | Don't know | No
+    MCQ180M              [numeric] range: 1 to 99999
+    MCQ160K              [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ170K              [factor] values: NA | No | Yes | Don't know
+    MCQ180K              [numeric] range: 0 to 99999
+    MCQ160L              [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ170L              [factor] values: NA | Yes | No | Don't know
+    MCQ180L              [numeric] range: 1 to 80
+    MCQ220               [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ230A              [factor] values: NA | Skin (non-melanoma) | Prostate | Other | Lymphoma/ Hodgkin's disease | Testis (testicular) | Skin (don't know what kind) | Rectum (rectal) | ... (30 total)
+    MCQ230B              [factor] values: NA | Melanoma | Bladder | Prostate | Skin (non-melanoma) | Bone | Esophagus (esophageal) | Lymphoma/ Hodgkins disease | ... (18 total)
+    MCQ230C              [factor] values: NA | Melanoma | Skin (non-melanoma) | Skin (don't know what kind) | Prostate | Cervix (cervical)
+    MCQ230D              [numeric] range: Inf to -Inf
+    MCQ240A              [numeric] range: 10 to 80
+    MCQ240AA             [numeric] range: 20 to 67
+    MCQ240B              [factor] values: NA | 40
+    MCQ240BB             [numeric] range: 25 to 80
+    MCQ240C              [numeric] range: 55 to 80
+    MCQ240CC             [numeric] range: 23 to 80
+    MCQ240D              [numeric] range: 11 to 34
+    MCQ240DD             [numeric] range: 13 to 80
+    MCQ240DK             [numeric] range: 23 to 43
+    MCQ240E              [numeric] range: 23 to 80
+    MCQ240F              [numeric] range: 16 to 61
+    MCQ240G              [numeric] range: 13 to 80
+    MCQ240H              [numeric] range: 52 to 68
+    MCQ240I              [numeric] range: Inf to -Inf
+    MCQ240J              [numeric] range: 42 to 76
+    MCQ240K              [numeric] range: 43 to 74
+    MCQ240L              [factor] values: NA | 80 years or older | 38
+    MCQ240M              [factor] values: NA | 28
+    MCQ240N              [numeric] range: 51 to 80
+    MCQ240O              [numeric] range: 21 to 80
+    MCQ240P              [numeric] range: 32 to 80
+    MCQ240Q              [factor] values: NA | 49
+    MCQ240R              [numeric] range: Inf to -Inf
+    MCQ240S              [numeric] range: 27 to 58
+    MCQ240T              [numeric] range: 66 to 80
+    MCQ240U              [numeric] range: 32 to 80
+    MCQ240V              [numeric] range: 48 to 80
+    MCQ240W              [numeric] range: 3 to 99999
+    MCQ240X              [numeric] range: 31 to 99999
+    MCQ240Y              [factor] values: NA | 16
+    MCQ240Z              [numeric] range: 11 to 79
+    MCQ300A              [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ300B              [factor] values: Yes | NA | No | Don't know | Refused
+    MCQ300C              [factor] values: Yes | NA | No | Don't know | Refused
+    MCQ365A              [factor] values: Yes | NA | No | Refused
+    MCQ365B              [factor] values: No | NA | Yes | Refused
+    MCQ365C              [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ365D              [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ370A              [factor] values: Yes | NA | No | Don't know | Refused
+    MCQ370B              [factor] values: Yes | NA | No | Refused
+    MCQ370C              [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ370D              [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ380               [factor] values: NA | About once | Never | Two or three times | Several times a day | Nearly every day | Don't know | Refused
+
+---- HIQ_G ----
+  Rows: 9756 | Columns: 17
+  Column names: SEQN, HIQ011, HIQ031A, HIQ031B, HIQ031C, HIQ031D, HIQ031E, HIQ031F, HIQ031G, HIQ031H, HIQ031I, HIQ031J, HIQ031AA, HIQ260, HIQ105, HIQ270, HIQ210
+
+  Column details:
+    SEQN                 [numeric] range: 62161 to 71916
+    HIQ011               [factor] values: Yes | No | Don't know | Refused
+    HIQ031A              [factor] values: Covered by private insurance | NA | Don't know | Refused
+    HIQ031B              [factor] values: NA | Covered by Medicare
+    HIQ031C              [factor] values: NA | Covered by Medi-Gap
+    HIQ031D              [factor] values: NA | Covered by Medicaid
+    HIQ031E              [factor] values: NA | Covered by SCHIP
+    HIQ031F              [factor] values: NA | Covered by military health care
+    HIQ031G              [factor] values: NA | Covered by Indian Health Service
+    HIQ031H              [factor] values: NA | Covered by state-sponsored health plan
+    HIQ031I              [factor] values: NA | Covered by other government insurance
+    HIQ031J              [factor] values: NA | Covered by single service plan
+    HIQ031AA             [factor] values: NA | No coverage of any type
+    HIQ260               [factor] values: NA | Yes | No | Refused
+    HIQ105               [factor] values: NA | Yes | No
+    HIQ270               [factor] values: Yes | NA | No | Don't know | Refused
+    HIQ210               [factor] values: No | NA | Yes | Don't know
+
+---- HUQ_G ----
+  Rows: 9756 | Columns: 10
+  Column names: SEQN, HUQ010, HUQ020, HUQ030, HUQ040, HUQ050, HUQ060, HUQ071, HUD080, HUQ090
+
+  Column details:
+    SEQN                 [numeric] range: 62161 to 71916
+    HUQ010               [factor] values: Excellent, | Very good, | Fair, or | Good, | Poor? | Don't know | Refused
+    HUQ020               [factor] values: About the same? | Better, | NA | Worse, or | Don't know | Refused
+    HUQ030               [factor] values: Yes | There is no place | There is more than one place
+    HUQ040               [factor] values: Clinic or health center | Doctor's office or HMO | Hospital outpatient department | NA | Hospital emergency room | Some other place | Refused
+    HUQ050               [factor] values: 2 to 3 | 1 | 4 to 9 | None | 13 or more | 10 to 12 | Don't know | Refused
+    HUQ060               [factor] values: NA | More than 3 years, or | More than 1 year, but not more than 3 years ago, | 6 months or less, | Don't know | More than 6 months, but not more than 1 year ago, | Never?
+    HUQ071               [factor] values: No | Yes | Don't know | Refused
+    HUD080               [numeric] range: 1 to 6
+    HUQ090               [factor] values: No | NA | Yes | Refused | Don't know
+
+---- OCQ_G ----
+  Rows: 6175 | Columns: 22
+  Column names: SEQN, OCD150, OCQ180, OCQ210, OCD231, OCD241, OCQ260, OCD270, OCQ275, OCQ380, OCD390G, OCD391, OCD392, OCD395, OCQ510, OCQ520, OCQ530, OCQ540, OCQ550, OCQ560, OCQ570, OCQ580
+
+  Column details:
+    SEQN                 [numeric] range: 62161 to 71916
+    OCD150               [factor] values: Working at a job or business, | Not working at a job or business? | Looking for work, or | With a job or business but not at work, | Refused | NA
+    OCQ180               [numeric] range: 1 to 99999
+    OCQ210               [factor] values: No | NA | Yes | Refused
+    OCD231               [factor] values: Health Care, Social Assistance | NA | Public Administration | Other Services | Arts, Entertainment, Recreation | Retail Trade | Professional, Scientific, Technical Services | Manufacturing: Non-Durable Goods | ... (23 total)
+    OCD241               [factor] values: Building & Grounds Cleaning, Maintenance Occupations | Office, Administrative Support Occupations | NA | Business, Financial Operations Occupations | Community, Social Services Occupations | Management Occupations | Healthcare Support Occupations | Protective Service Occupations | ... (24 total)
+    OCQ260               [factor] values: A local government employee | An employee of a private company, business, or individual for wages, salary, or commission. | NA | A state government employee | Self-employed in own business, professional practice or farm. | A federal government employee | Working without pay in family business or farm | Don't know | ... (9 total)
+    OCD270               [numeric] range: 0 to 99999
+    OCQ275               [factor] values: No | NA | Yes | Don't know | Refused
+    OCQ380               [factor] values: NA | Going to school | On layoff | Retired | Taking care of house or family | Disabled | Other | Unable to work for health reasons
+    OCD390G              [factor] values: Same as current occupation | Enter occupation | Never worked | Refused | Don't know | Armed forces | NA
+    OCD391               [factor] values: NA | Health Care, Social Assistance | Information Services | Public Administration | Educational Services | Construction | Agriculture, Forestry, Fishing | Retail Trade | ... (23 total)
+    OCD392               [factor] values: NA | Healthcare Support Occupations | Office, Administrative Support Occupations | Protective Service Occupations | Education, Training, Library Occupations | Construction, Extraction Occupations | Management Occupations | Sales & Related Occupations | ... (24 total)
+    OCD395               [numeric] range: 0 to 99999
+    OCQ510               [factor] values: No | NA | Yes | Refused | Don't know
+    OCQ520               [numeric] range: 0 to 9999
+    OCQ530               [factor] values: No | NA | Yes | Refused | Don't know
+    OCQ540               [numeric] range: 0 to 9999
+    OCQ550               [factor] values: No | NA | Yes | Refused | Don't know
+    OCQ560               [numeric] range: 0 to 9999
+    OCQ570               [factor] values: Yes | No | NA | Refused | Don't know
+    OCQ580               [numeric] range: 0 to 9999
+
+############################################################
+CYCLE: 2013-2014 (suffix _H)
+############################################################
+
+---- DEMO_H ----
+  Rows: 10175 | Columns: 47
+  Column names: SEQN, SDDSRVYR, RIDSTATR, RIAGENDR, RIDAGEYR, RIDAGEMN, RIDRETH1, RIDRETH3, RIDEXMON, RIDEXAGM, DMQMILIZ, DMQADFC, DMDBORN4, DMDCITZN, DMDYRSUS, DMDEDUC3, DMDEDUC2, DMDMARTL, RIDEXPRG, SIALANG, SIAPROXY, SIAINTRP, FIALANG, FIAPROXY, FIAINTRP, MIALANG, MIAPROXY, MIAINTRP, AIALANGA, DMDHHSIZ, DMDFMSIZ, DMDHHSZA, DMDHHSZB, DMDHHSZE, DMDHRGND, DMDHRAGE, DMDHRBR4, DMDHREDU, DMDHRMAR, DMDHSEDU, WTINT2YR, WTMEC2YR, SDMVPSU, SDMVSTRA, INDHHIN2, INDFMIN2, INDFMPIR
+
+  Column details:
+    SEQN                 [numeric] range: 73557 to 83731
+    SDDSRVYR             [factor] values: NHANES 2013-2014 public release
+    RIDSTATR             [factor] values: Both interviewed and MEC examined | Interviewed only
+    RIAGENDR             [factor] values: Male | Female
+    RIDAGEYR             [numeric] range: 0 to 80
+    RIDAGEMN             [numeric] range: 0 to 24
+    RIDRETH1             [factor] values: Non-Hispanic Black | Non-Hispanic White | Mexican American | Other Hispanic | Other Race - Including Multi-Racial
+    RIDRETH3             [factor] values: Non-Hispanic Black | Non-Hispanic White | Mexican American | Other Hispanic | Other Race - Including Multi-Racial | Non-Hispanic Asian
+    RIDEXMON             [factor] values: November 1 through April 30 | May 1 through October 31 | NA
+    RIDEXAGM             [numeric] range: 0 to 239
+    DMQMILIZ             [factor] values: Yes | No | NA | Refused
+    DMQADFC              [factor] values: Yes | NA | No | Don't Know
+    DMDBORN4             [factor] values: Born in 50 US states or Washington, DC | Others | Refused | Don't Know
+    DMDCITZN             [factor] values: Citizen by birth or naturalization | Not a citizen of the US | NA | Refused | Don't Know
+    DMDYRSUS             [factor] values: NA | 10 year or more, but less than 15 years | 20 year or more, but less than 30 years | 5 year or more, but less than 10 years | 30 year or more, but less than 40 years | 1 year or more, but less than 5 years | 50 years or more | 40 year or more, but less than 50 years | ... (12 total)
+    DMDEDUC3             [factor] values: NA | 3rd grade | 2nd grade | 4th grade | 9th grade | More than high school | 6th grade | 1st grade | ... (20 total)
+    DMDEDUC2             [factor] values: High school graduate/GED or equivalent | Some college or AA degree | NA | College graduate or above | 9-11th grade (Includes 12th grade with no diploma) | Less than 9th grade | Don't Know | Refused
+    DMDMARTL             [factor] values: Separated | Married | NA | Divorced | Widowed | Never married | Living with partner | Refused | ... (9 total)
+    RIDEXPRG             [factor] values: NA | The participant was not pregnant at exam | Yes, positive lab pregnancy test or self-reported pregnant at exam | Cannot ascertain if the participant is pregnant at exam
+    SIALANG              [factor] values: English | Spanish
+    SIAPROXY             [factor] values: No | Yes | NA
+    SIAINTRP             [factor] values: No | Yes
+    FIALANG              [factor] values: English | Spanish | NA
+    FIAPROXY             [factor] values: No | NA | Yes
+    FIAINTRP             [factor] values: No | Yes | NA
+    MIALANG              [factor] values: English | NA | Spanish
+    MIAPROXY             [factor] values: No | NA | Yes
+    MIAINTRP             [factor] values: No | NA | Yes
+    AIALANGA             [factor] values: English | NA | Spanish | Asian languages
+    DMDHHSIZ             [factor] values: 3 | 4 | 2 | 1 | 7 or more people in the Household | 5 | 6
+    DMDFMSIZ             [factor] values: 3 | 4 | 2 | 1 | 7 or more people in the Family | 5 | 6
+    DMDHHSZA             [factor] values: 0 | 1 | 3 or more | 2
+    DMDHHSZB             [factor] values: 0 | 2 | 1 | 3 | 4 or more
+    DMDHHSZE             [factor] values: 2 | 0 | 1 | 3 or more
+    DMDHRGND             [factor] values: Male | Female
+    DMDHRAGE             [numeric] range: 18 to 80
+    DMDHRBR4             [factor] values: Born in 50 US states or Washington, DC | Others | NA | Refused
+    DMDHREDU             [factor] values: High School Grad/GED or Equivalent | Some College or AA degree | College Graduate or above | 9-11th Grade (Includes 12th grade with no diploma) | NA | Less Than 9th Grade | Refused | Don't Know
+    DMDHRMAR             [factor] values: Separated | Married | Divorced | Widowed | Never married | NA | Refused | Living with partner | ... (9 total)
+    DMDHSEDU             [factor] values: NA | Less Than 9th Grade | High School Grad/GED or Equivalent | Some College or AA degree | College Graduate or above | 9-11th Grade (Includes 12th grade with no diploma) | Don't Know | Refused
+    WTINT2YR             [numeric] range: 3697.772098 to 167884.543709
+    WTMEC2YR             [numeric] range: 0 to 171395.264901
+    SDMVPSU              [numeric] range: 1 to 2
+    SDMVSTRA             [numeric] range: 104 to 118
+    INDHHIN2             [factor] values: $15,000 to $19,999 | $35,000 to $44,999 | $65,000 to $74,999 | $55,000 to $64,999 | $100,000 and Over | $10,000 to $14,999 | Refused | $20,000 to $24,999 | ... (17 total)
+    INDFMIN2             [factor] values: $15,000 to $19,999 | $35,000 to $44,999 | $65,000 to $74,999 | $55,000 to $64,999 | $100,000 and Over | $10,000 to $14,999 | Refused | $20,000 to $24,999 | ... (17 total)
+    INDFMPIR             [numeric] range: 0 to 5
+
+---- DLQ_H ----
+  Rows: 9770 | Columns: 7
+  Column names: SEQN, DLQ010, DLQ020, DLQ040, DLQ050, DLQ060, DLQ080
+
+  Column details:
+    SEQN                 [numeric] range: 73557 to 83731
+    DLQ010               [factor] values: No | Yes | NA | Refused | Don't know
+    DLQ020               [factor] values: No | Yes | NA | Refused | Don't know
+    DLQ040               [factor] values: No | Yes | NA | Refused | Don't know
+    DLQ050               [factor] values: No | Yes | NA | Refused | Don't know
+    DLQ060               [factor] values: No | NA | Yes | Refused
+    DLQ080               [factor] values: No | NA | Yes | Refused | Don't know
+
+---- PFQ_H ----
+  Rows: 9230 | Columns: 36
+  Column names: SEQN, PFQ020, PFQ030, PFQ033, PFQ041, PFQ049, PFQ051, PFQ054, PFQ057, PFQ059, PFQ061A, PFQ061B, PFQ061C, PFQ061D, PFQ061E, PFQ061F, PFQ061G, PFQ061H, PFQ061I, PFQ061J, PFQ061K, PFQ061L, PFQ061M, PFQ061N, PFQ061O, PFQ061P, PFQ061Q, PFQ061R, PFQ061S, PFQ061T, PFQ063A, PFQ063B, PFQ063C, PFQ063D, PFQ063E, PFQ090
+
+  Column details:
+    SEQN                 [numeric] range: 73557 to 83731
+    PFQ020               [factor] values: NA | No | Yes | Don't know
+    PFQ030               [factor] values: NA | Yes | No | Don't know
+    PFQ033               [factor] values: NA | No | Yes
+    PFQ041               [factor] values: NA | No | Yes | Don't know
+    PFQ049               [factor] values: No | NA | Yes | Don't know | Refused
+    PFQ051               [factor] values: No | NA | Yes | Don't know
+    PFQ054               [factor] values: No | NA | Yes
+    PFQ057               [factor] values: No | NA | Yes | Don't know
+    PFQ059               [factor] values: No | NA | Yes | Don't know
+    PFQ061A              [factor] values: No difficulty | NA | Do not do this activity | Some difficulty | Unable to do | Much difficulty | Don't know
+    PFQ061B              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Do not do this activity | Unable to do | Don't know
+    PFQ061C              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Do not do this activity | Unable to do | Don't know
+    PFQ061D              [factor] values: No difficulty | NA | Some difficulty | Unable to do | Much difficulty | Do not do this activity
+    PFQ061E              [factor] values: No difficulty | NA | Unable to do | Some difficulty | Much difficulty | Do not do this activity
+    PFQ061F              [factor] values: No difficulty | NA | Do not do this activity | Some difficulty | Unable to do | Much difficulty
+    PFQ061G              [factor] values: No difficulty | NA | Some difficulty | Unable to do | Much difficulty | Do not do this activity
+    PFQ061H              [factor] values: No difficulty | NA | Unable to do | Some difficulty | Much difficulty | Do not do this activity
+    PFQ061I              [factor] values: No difficulty | NA | Unable to do | Some difficulty | Much difficulty | Do not do this activity | Don't know
+    PFQ061J              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Do not do this activity | Unable to do
+    PFQ061K              [factor] values: No difficulty | NA | Some difficulty | Unable to do | Much difficulty
+    PFQ061L              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity
+    PFQ061M              [factor] values: No difficulty | NA | Unable to do | Some difficulty | Much difficulty | Do not do this activity | Don't know
+    PFQ061N              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity
+    PFQ061O              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity
+    PFQ061P              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity
+    PFQ061Q              [factor] values: No difficulty | NA | Some difficulty | Unable to do | Do not do this activity | Much difficulty | Refused
+    PFQ061R              [factor] values: No difficulty | NA | Unable to do | Some difficulty | Do not do this activity | Much difficulty | Refused
+    PFQ061S              [factor] values: No difficulty | NA | Unable to do | Some difficulty | Much difficulty | Do not do this activity | Refused
+    PFQ061T              [factor] values: No difficulty | NA | Much difficulty | Some difficulty | Unable to do | Do not do this activity | Refused
+    PFQ063A              [factor] values: NA | Other impairment/problem | Arthritis/rheumatism | Fractures, bone/joint injury | Hypertension/high blood pressure | Back or neck problem | Diabetes | Lung/breathing problem | ... (22 total)
+    PFQ063B              [factor] values: NA | Back or neck problem | Weight problem | Other impairment/problem | Mental retardation | Fractures, bone/joint injury | Cancer | Hypertension/high blood pressure | ... (20 total)
+    PFQ063C              [factor] values: NA | Hypertension/high blood pressure | Other injury | Fractures, bone/joint injury | Other impairment/problem | Vision/problem seeing | Arthritis/rheumatism | Mental retardation | ... (20 total)
+    PFQ063D              [factor] values: NA | Fractures, bone/joint injury | Lung/breathing problem | Other injury | Other impairment/problem | Vision/problem seeing | Weight problem | Heart problem | ... (16 total)
+    PFQ063E              [factor] values: NA | Weight problem | Arthritis/rheumatism | Vision/problem seeing | Hypertension/high blood pressure | Diabetes | Other impairment/problem | Stroke problem | ... (18 total)
+    PFQ090               [factor] values: No | NA | Yes
+
+---- MCQ_H ----
+  Rows: 9770 | Columns: 95
+  Column names: SEQN, MCQ010, MCQ025, MCQ035, MCQ040, MCQ050, AGQ030, MCQ053, MCQ070, MCQ075, MCQ080, MCQ082, MCQ084, MCQ086, MCQ092, MCD093, MCQ149, MCQ151, MCQ160A, MCQ180A, MCQ195, MCQ160N, MCQ180N, MCQ160B, MCQ180B, MCQ160C, MCQ180C, MCQ160D, MCQ180D, MCQ160E, MCQ180E, MCQ160F, MCQ180F, MCQ160G, MCQ180G, MCQ160M, MCQ170M, MCQ180M, MCQ160K, MCQ170K, MCQ180K, MCQ160L, MCQ170L, MCQ180L, MCQ160O, MCQ203, MCQ206, MCQ220, MCQ230A, MCQ230B, MCQ230C, MCQ230D, MCQ240A, MCQ240AA, MCQ240B, MCQ240BB, MCQ240C, MCQ240CC, MCQ240D, MCQ240DD, MCQ240DK, MCQ240E, MCQ240F, MCQ240G, MCQ240H, MCQ240I, MCQ240J, MCQ240K, MCQ240L, MCQ240M, MCQ240N, MCQ240O, MCQ240P, MCQ240Q, MCQ240R, MCQ240S, MCQ240T, MCQ240U, MCQ240V, MCQ240W, MCQ240X, MCQ240Y, MCQ240Z, MCQ300A, MCQ300B, MCQ300C, MCQ365A, MCQ365B, MCQ365C, MCQ365D, MCQ370A, MCQ370B, MCQ370C, MCQ370D, MCQ380
+
+  Column details:
+    SEQN                 [numeric] range: 73557 to 83731
+    MCQ010               [factor] values: No | Yes | Don't know | NA | Refused
+    MCQ025               [numeric] range: 1 to 99999
+    MCQ035               [factor] values: NA | Yes | No | Don't know
+    MCQ040               [factor] values: NA | Yes | No | Don't know
+    MCQ050               [factor] values: NA | No | Yes | Don't know
+    AGQ030               [factor] values: NA | No | Yes | Don't know
+    MCQ053               [factor] values: No | Yes | Don't know | NA | Refused
+    MCQ070               [factor] values: No | NA | Yes | Don't know
+    MCQ075               [factor] values: NA | little or no psoriasis, | scattered patches (that could be covered 
+between three and ten palms of {your/ 
+his/her} hand), or | only a few patches (that could be covered 
+by one or two palms of {your/his/her} 
+hand), | extensive psoriasis (covering large areas of 
+the body, that would be more than ten 
+palms of {your/his/her} hand)? | Don't know
+    MCQ080               [factor] values: Yes | No | NA | Don't know
+    MCQ082               [factor] values: No | NA | Yes | Don't know
+    MCQ084               [factor] values: No | NA | Yes | Don't know
+    MCQ086               [factor] values: No | NA | Yes | Don't know
+    MCQ092               [factor] values: No | Yes | NA | Don't know | Refused
+    MCD093               [factor] values: NA | 1972 - 1991 | Before 1972 | 1992 to present | Don't know | Refused
+    MCQ149               [factor] values: NA | No | Yes
+    MCQ151               [numeric] range: 8 to 11
+    MCQ160A              [factor] values: Yes | No | NA | Don't know
+    MCQ180A              [numeric] range: 1 to 99999
+    MCQ195               [factor] values: Don't know | NA | Rheumatoid arthritis | Other | Osteoarthritis or degenerative arthritis | Psoriatic arthritis | Refused
+    MCQ160N              [factor] values: No | NA | Yes | Don't know
+    MCQ180N              [numeric] range: 8 to 99999
+    MCQ160B              [factor] values: No | NA | Yes | Don't know
+    MCQ180B              [numeric] range: 0 to 99999
+    MCQ160C              [factor] values: No | NA | Yes | Don't know
+    MCQ180C              [numeric] range: 0 to 99999
+    MCQ160D              [factor] values: No | NA | Yes | Don't know
+    MCQ180D              [numeric] range: 9 to 99999
+    MCQ160E              [factor] values: No | NA | Yes | Don't know
+    MCQ180E              [numeric] range: 16 to 99999
+    MCQ160F              [factor] values: Yes | No | NA | Don't know
+    MCQ180F              [numeric] range: 7 to 99999
+    MCQ160G              [factor] values: No | NA | Yes | Don't know
+    MCQ180G              [numeric] range: 10 to 99999
+    MCQ160M              [factor] values: No | NA | Yes | Don't know
+    MCQ170M              [factor] values: NA | Yes | No | Don't know
+    MCQ180M              [numeric] range: 1 to 99999
+    MCQ160K              [factor] values: No | NA | Yes | Don't know
+    MCQ170K              [factor] values: NA | No | Yes | Don't know
+    MCQ180K              [numeric] range: 0 to 99999
+    MCQ160L              [factor] values: No | NA | Yes | Don't know
+    MCQ170L              [factor] values: NA | Don't know | Yes | No
+    MCQ180L              [numeric] range: 5 to 99999
+    MCQ160O              [factor] values: No | NA | Yes | Don't know
+    MCQ203               [factor] values: No | NA | Yes | Don't know
+    MCQ206               [numeric] range: 0 to 999
+    MCQ220               [factor] values: No | Yes | NA
+    MCQ230A              [factor] values: NA | Kidney | Skin (don't know what kind) | Uterus (uterine) | Breast | Prostate | Blood | Lung | ... (29 total)
+    MCQ230B              [factor] values: NA | Melanoma | Bone | Skin (non-melanoma) | Thyroid | Other | Skin (don't know what kind) | Ovary (ovarian) | ... (21 total)
+    MCQ230C              [factor] values: NA | Breast | Colon | Lung | Prostate
+    MCQ230D              [factor] values: NA | More than 3 kinds
+    MCQ240A              [numeric] range: 50 to 80
+    MCQ240AA             [numeric] range: 22 to 32
+    MCQ240B              [numeric] range: 10 to 63
+    MCQ240BB             [numeric] range: 25 to 66
+    MCQ240C              [numeric] range: 58 to 59
+    MCQ240CC             [numeric] range: 14 to 67
+    MCQ240D              [numeric] range: 25 to 73
+    MCQ240DD             [numeric] range: 4 to 80
+    MCQ240DK             [numeric] range: 28 to 47
+    MCQ240E              [numeric] range: 14 to 99999
+    MCQ240F              [numeric] range: 15 to 65
+    MCQ240G              [numeric] range: 25 to 80
+    MCQ240H              [numeric] range: 54 to 56
+    MCQ240I              [numeric] range: Inf to -Inf
+    MCQ240J              [numeric] range: 36 to 80
+    MCQ240K              [numeric] range: 51 to 69
+    MCQ240L              [numeric] range: 9 to 75
+    MCQ240M              [numeric] range: 45 to 70
+    MCQ240N              [numeric] range: 29 to 80
+    MCQ240O              [numeric] range: 25 to 79
+    MCQ240P              [numeric] range: 18 to 80
+    MCQ240Q              [numeric] range: 41 to 50
+    MCQ240R              [numeric] range: Inf to -Inf
+    MCQ240S              [numeric] range: 16 to 70
+    MCQ240T              [numeric] range: 48 to 63
+    MCQ240U              [numeric] range: 49 to 80
+    MCQ240V              [factor] values: NA | 51
+    MCQ240W              [numeric] range: 7 to 80
+    MCQ240X              [numeric] range: 18 to 80
+    MCQ240Y              [numeric] range: 20 to 55
+    MCQ240Z              [numeric] range: 45 to 73
+    MCQ300A              [factor] values: No | Yes | NA | Don't know
+    MCQ300B              [factor] values: Yes | No | NA | Don't know | Refused
+    MCQ300C              [factor] values: Yes | No | NA | Don't know
+    MCQ365A              [factor] values: Yes | No | NA | Don't know
+    MCQ365B              [factor] values: No | NA | Yes
+    MCQ365C              [factor] values: Yes | No | NA | Don't know
+    MCQ365D              [factor] values: Yes | No | NA | Don't know
+    MCQ370A              [factor] values: Yes | No | NA | Refused | Don't know
+    MCQ370B              [factor] values: No | NA | Yes | Refused
+    MCQ370C              [factor] values: Yes | No | NA | Refused | Don't know
+    MCQ370D              [factor] values: No | NA | Yes | Refused | Don't know
+    MCQ380               [factor] values: Two or three times | NA | Never | About once | Nearly every day | Don't know | Several times a day
+
+---- HIQ_H ----
+  Rows: 10175 | Columns: 17
+  Column names: SEQN, HIQ011, HIQ031A, HIQ031B, HIQ031C, HIQ031D, HIQ031E, HIQ031F, HIQ031G, HIQ031H, HIQ031I, HIQ031J, HIQ031AA, HIQ260, HIQ105, HIQ270, HIQ210
+
+  Column details:
+    SEQN                 [numeric] range: 73557 to 83731
+    HIQ011               [factor] values: Yes | No | Don't know | Refused
+    HIQ031A              [factor] values: NA | Covered by private insurance | Don't know | Refused
+    HIQ031B              [factor] values: Covered by Medicare | NA
+    HIQ031C              [factor] values: NA | Covered by Medi-Gap
+    HIQ031D              [factor] values: Covered by Medicaid | NA
+    HIQ031E              [factor] values: NA | Covered by SCHIP
+    HIQ031F              [factor] values: NA | Covered by military health care
+    HIQ031G              [factor] values: NA | Covered by Indian Health Service
+    HIQ031H              [factor] values: NA | Covered by state-sponsored health plan
+    HIQ031I              [factor] values: NA | Covered by other government insurance
+    HIQ031J              [factor] values: NA | Covered by single service plan
+    HIQ031AA             [factor] values: NA | No coverage of any type
+    HIQ260               [factor] values: NA | No | Yes | Refused | Don't know
+    HIQ105               [factor] values: NA | Yes | No
+    HIQ270               [factor] values: Yes | NA | Don't know | No | Refused
+    HIQ210               [factor] values: No | NA | Yes | Don't know
+
+---- HUQ_H ----
+  Rows: 10175 | Columns: 10
+  Column names: SEQN, HUQ010, HUQ020, HUQ030, HUQ041, HUQ051, HUQ061, HUQ071, HUD080, HUQ090
+
+  Column details:
+    SEQN                 [numeric] range: 73557 to 83731
+    HUQ010               [factor] values: Very good, | Fair, or | Good, | Poor? | Excellent, | Don't know | Refused
+    HUQ020               [factor] values: Better, | Worse, or | About the same? | NA | Refused | Don't know
+    HUQ030               [factor] values: Yes | There is no place | There is more than one place
+    HUQ041               [factor] values: Doctor's office or HMO | NA | Clinic or health center | Doesn't go to one place most often | Hospital emergency room | Some other place | Hospital outpatient department | Refused
+    HUQ051               [factor] values: 8 to 9 | 2 to 3 | 1 | 6 to 7 | 4 to 5 | None | 10 to 12 | 16 or more | ... (10 total)
+    HUQ061               [factor] values: NA | more than 2 years, but not more than 5 years ago, | more than 5 years ago, or | more than 6 months, but not more than 1 year ago, | more than 1 year, but not more than 2 years ago, | 6 months or less, | Never? | Don't know
+    HUQ071               [factor] values: No | Yes | Don't know
+    HUD080               [factor] values: NA | 2 | 1 | 3 | 4 | 6 times or more | 5
+    HUQ090               [factor] values: No | NA | Yes | Don't know | Refused
+
+---- OCQ_H ----
+  Rows: 6464 | Columns: 13
+  Column names: SEQN, OCD150, OCQ180, OCQ210, OCD231, OCD241, OCQ260, OCD270, OCQ380, OCD390G, OCD391, OCD392, OCD395
+
+  Column details:
+    SEQN                 [numeric] range: 73557 to 83729
+    OCD150               [factor] values: Not working at a job or business? | Working at a job or business, | Looking for work, or | With a job or business but not at work, | NA
+    OCQ180               [numeric] range: 1 to 99999
+    OCQ210               [factor] values: NA | No | Yes | Refused | Don't know
+    OCD231               [factor] values: NA | Retail Trade | Transportation, Warehousing | Construction | Accommodation, Food Services | Real Estate, Rental, Leasing | Education Services | Arts, Entertainment, Recreation | ... (23 total)
+    OCD241               [factor] values: NA | Sales & Related Occupations | Office, Administrative Support Occupations | Transportation, Material Moving Occupations | Food Preparation, Serving Occupations | Protective Service Occupations | Computer, Mathematical Occupations | Life, Physical, Social Science Occupations | ... (24 total)
+    OCQ260               [factor] values: NA | An employee of a private company, business, or individual for wages, salary, or commission. | A federal government employee | A state government employee | Self-employed in own business, professional practice or farm. | A local government employee | Refused | Working without pay in family business or farm
+    OCD270               [numeric] range: 0 to 77777
+    OCQ380               [factor] values: Retired | NA | Unable to work for health reasons | Taking care of house or family | Going to school | Other | Disabled | On layoff | ... (9 total)
+    OCD390G              [factor] values: Enter occupation | Same as current occupation | Never worked | Armed forces | Refused | Don't know | NA
+    OCD391               [factor] values: Information | NA | Public Administration | Education Services | Other Services | Health Care, Social Assistance | Finance, Insurance | Retail Trade | ... (23 total)
+    OCD392               [factor] values: Sales & Related Occupations | NA | Business, Financial Operations Occupations | Education, Training, Library Occupations | Installation, Maintenance, Repair Occupations | Healthcare Practitioner, Technical Occupations | Office, Administrative Support Occupations | Building & Grounds Cleaning, Maintenance Occupations | ... (24 total)
+    OCD395               [numeric] range: 0 to 99999
+
+############################################################
+CYCLE: 2015-2016 (suffix _I)
+############################################################
+
+---- DEMO_I ----
+  Rows: 9971 | Columns: 47
+  Column names: SEQN, SDDSRVYR, RIDSTATR, RIAGENDR, RIDAGEYR, RIDAGEMN, RIDRETH1, RIDRETH3, RIDEXMON, RIDEXAGM, DMQMILIZ, DMQADFC, DMDBORN4, DMDCITZN, DMDYRSUS, DMDEDUC3, DMDEDUC2, DMDMARTL, RIDEXPRG, SIALANG, SIAPROXY, SIAINTRP, FIALANG, FIAPROXY, FIAINTRP, MIALANG, MIAPROXY, MIAINTRP, AIALANGA, DMDHHSIZ, DMDFMSIZ, DMDHHSZA, DMDHHSZB, DMDHHSZE, DMDHRGND, DMDHRAGE, DMDHRBR4, DMDHREDU, DMDHRMAR, DMDHSEDU, WTINT2YR, WTMEC2YR, SDMVPSU, SDMVSTRA, INDHHIN2, INDFMIN2, INDFMPIR
+
+  Column details:
+    SEQN                 [numeric] range: 83732 to 93702
+    SDDSRVYR             [factor] values: NHANES 2015-2016 public release
+    RIDSTATR             [factor] values: Both interviewed and MEC examined | Interviewed only
+    RIAGENDR             [factor] values: Male | Female
+    RIDAGEYR             [numeric] range: 0 to 80
+    RIDAGEMN             [numeric] range: 0 to 24
+    RIDRETH1             [factor] values: Non-Hispanic White | Non-Hispanic Black | Mexican American | Other Hispanic | Other Race - Including Multi-Racial
+    RIDRETH3             [factor] values: Non-Hispanic White | Non-Hispanic Black | Mexican American | Other Hispanic | Non-Hispanic Asian | Other Race - Including Multi-Racial
+    RIDEXMON             [factor] values: November 1 through April 30 | May 1 through October 31 | NA
+    RIDEXAGM             [numeric] range: 0 to 239
+    DMQMILIZ             [factor] values: No | Yes | NA
+    DMQADFC              [factor] values: NA | No | Yes | Refused
+    DMDBORN4             [factor] values: Born in 50 US states or Washington, DC | Others | Don't Know
+    DMDCITZN             [factor] values: Citizen by birth or naturalization | Not a citizen of the US | Don't Know | Refused | NA
+    DMDYRSUS             [factor] values: NA | 30 year or more, but less than 40 years | 1 year or more, but less than 5 years | 20 year or more, but less than 30 years | 40 year or more, but less than 50 years | 5 year or more, but less than 10 years | 10 year or more, but less than 15 years | Less than 1 year | ... (12 total)
+    DMDEDUC3             [factor] values: NA | 6th grade | 11th grade | 9th grade | 10th grade | 8th grade | More than high school | 4th grade | ... (20 total)
+    DMDEDUC2             [factor] values: College graduate or above | High school graduate/GED or equivalent | Some college or AA degree | 9-11th grade (Includes 12th grade with no diploma) | NA | Less than 9th grade | Don't Know
+    DMDMARTL             [factor] values: Married | Divorced | Living with partner | Separated | NA | Never married | Widowed | Refused | ... (9 total)
+    RIDEXPRG             [factor] values: NA | Yes, positive lab pregnancy test or self-reported pregnant at exam | The participant was not pregnant at exam | Cannot ascertain if the participant is pregnant at exam
+    SIALANG              [factor] values: English | Spanish
+    SIAPROXY             [factor] values: No | Yes | NA
+    SIAINTRP             [factor] values: No | Yes
+    FIALANG              [factor] values: English | Spanish | NA
+    FIAPROXY             [factor] values: No | NA | Yes
+    FIAINTRP             [factor] values: No | Yes | NA
+    MIALANG              [factor] values: English | NA | Spanish
+    MIAPROXY             [factor] values: No | NA | Yes
+    MIAINTRP             [factor] values: No | NA | Yes
+    AIALANGA             [factor] values: English | NA | Asian languages | Spanish
+    DMDHHSIZ             [factor] values: 2 | 1 | 5 | 7 or more people in the Household | 3 | 4 | 6
+    DMDFMSIZ             [factor] values: 2 | 1 | 5 | 7 or more people in the Family | 3 | 4 | 6
+    DMDHHSZA             [factor] values: 0 | 1 | 2 | 3 or more
+    DMDHHSZB             [factor] values: 0 | 2 | 1 | 3 | 4 or more
+    DMDHHSZE             [factor] values: 1 | 0 | 2 | 3 or more
+    DMDHRGND             [factor] values: Male | Female
+    DMDHRAGE             [numeric] range: 18 to 80
+    DMDHRBR4             [factor] values: Born in 50 US states or Washington, DC | Others | NA | Don't Know | Refused
+    DMDHREDU             [factor] values: College Graduate or above | High School Grad/GED or Equivalent | Some College or AA degree | Less Than 9th Grade | Don't Know | NA | 9-11th Grade (Includes 12th grade with no diploma)
+    DMDHRMAR             [factor] values: Married | Divorced | Living with partner | Widowed | Never married | Separated | Refused | NA | ... (9 total)
+    DMDHSEDU             [factor] values: High School Grad/GED or Equivalent | NA | College Graduate or above | Some College or AA degree | 9-11th Grade (Includes 12th grade with no diploma) | Less Than 9th Grade | Don't Know | Refused
+    WTINT2YR             [numeric] range: 3293.928267 to 233755.84185
+    WTMEC2YR             [numeric] range: 0 to 242386.660766
+    SDMVPSU              [numeric] range: 1 to 2
+    SDMVSTRA             [numeric] range: 119 to 133
+    INDHHIN2             [factor] values: $65,000 to $74,999 | $15,000 to $19,999 | $20,000 to $24,999 | $35,000 to $44,999 | $75,000 to $99,999 | $25,000 to $34,999 | $100,000 and Over | Refused | ... (17 total)
+    INDFMIN2             [factor] values: $65,000 to $74,999 | $15,000 to $19,999 | $20,000 to $24,999 | $35,000 to $44,999 | $75,000 to $99,999 | $25,000 to $34,999 | $100,000 and Over | Refused | ... (17 total)
+    INDFMPIR             [numeric] range: 0 to 5
+
+---- DLQ_I ----
+  Rows: 9575 | Columns: 13
+  Column names: SEQN, DLQ010, DLQ020, DLQ040, DLQ050, DLQ060, DLQ080, DLQ100, DLQ110, DLQ130, DLQ140, DLQ150, DLQ170
+
+  Column details:
+    SEQN                 [numeric] range: 83732 to 93702
+    DLQ010               [factor] values: No | Yes | Don't know
+    DLQ020               [factor] values: No | Yes | Don't know
+    DLQ040               [factor] values: No | Yes | NA | Don't know
+    DLQ050               [factor] values: No | Yes | NA | Don't know
+    DLQ060               [factor] values: No | NA | Yes | Don't know
+    DLQ080               [factor] values: No | NA | Yes | Don't know
+    DLQ100               [factor] values: A few times a year | Monthly | Weekly | NA | Daily | Never | Don't know | Refused
+    DLQ110               [factor] values: No | Yes | NA | Don't know
+    DLQ130               [factor] values: A little | A lot | Somewhere in between a little and a lot | NA | Don't know | Refused
+    DLQ140               [factor] values: Never | A few times a year | Monthly | NA | Weekly | Daily | Don't know | Refused
+    DLQ150               [factor] values: No | Yes | NA | Don't know
+    DLQ170               [factor] values: NA | A little | A lot | Somewhere in between a little and a lot | Don't know | Refused
+
+---- PFQ_I ----
+  Rows: 8991 | Columns: 36
+  Column names: SEQN, PFQ020, PFQ030, PFQ033, PFQ041, PFQ049, PFQ051, PFQ054, PFQ057, PFQ059, PFQ061A, PFQ061B, PFQ061C, PFQ061D, PFQ061E, PFQ061F, PFQ061G, PFQ061H, PFQ061I, PFQ061J, PFQ061K, PFQ061L, PFQ061M, PFQ061N, PFQ061O, PFQ061P, PFQ061Q, PFQ061R, PFQ061S, PFQ061T, PFQ063A, PFQ063B, PFQ063C, PFQ063D, PFQ063E, PFQ090
+
+  Column details:
+    SEQN                 [numeric] range: 83732 to 93702
+    PFQ020               [factor] values: NA | No | Yes
+    PFQ030               [factor] values: NA | Yes | No | Don't know
+    PFQ033               [factor] values: NA | No | Yes
+    PFQ041               [factor] values: NA | No | Yes | Don't know
+    PFQ049               [factor] values: No | NA | Yes | Don't know
+    PFQ051               [factor] values: Yes | No | NA | Don't know | Refused
+    PFQ054               [factor] values: No | NA | Yes | Don't know
+    PFQ057               [factor] values: No | Yes | NA | Don't know
+    PFQ059               [factor] values: NA | No | Yes | Don't know
+    PFQ061A              [factor] values: No difficulty | NA | Some difficulty | Do not do this activity | Unable to do | Much difficulty | Don't know
+    PFQ061B              [factor] values: No difficulty | NA | Unable to do | Some difficulty | Much difficulty | Do not do this activity
+    PFQ061C              [factor] values: Some difficulty | NA | No difficulty | Unable to do | Much difficulty | Do not do this activity | Don't know
+    PFQ061D              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity
+    PFQ061E              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity
+    PFQ061F              [factor] values: No difficulty | NA | Do not do this activity | Some difficulty | Much difficulty | Unable to do
+    PFQ061G              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity
+    PFQ061H              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity
+    PFQ061I              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity | Don't know
+    PFQ061J              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity
+    PFQ061K              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity
+    PFQ061L              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity
+    PFQ061M              [factor] values: No difficulty | NA | Some difficulty | Unable to do | Much difficulty | Do not do this activity | Don't know
+    PFQ061N              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity | Don't know
+    PFQ061O              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity
+    PFQ061P              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity
+    PFQ061Q              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Do not do this activity | Unable to do
+    PFQ061R              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Do not do this activity | Unable to do | Don't know
+    PFQ061S              [factor] values: No difficulty | NA | Some difficulty | Do not do this activity | Much difficulty | Unable to do
+    PFQ061T              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity | Don't know
+    PFQ063A              [factor] values: Lung/breathing problem | NA | Arthritis/rheumatism | Back or neck problem | Other impairment/problem | Fractures, bone/joint injury | Depression/anxiety/emotional problem | Diabetes | ... (22 total)
+    PFQ063B              [factor] values: NA | Back or neck problem | Arthritis/rheumatism | Heart problem | Diabetes | Depression/anxiety/emotional problem | Other impairment/problem | Fractures, bone/joint injury | ... (19 total)
+    PFQ063C              [factor] values: NA | Diabetes | Hearing problem | Hypertension/high blood pressure | Other impairment/problem | Back or neck problem | Fractures, bone/joint injury | Heart problem | ... (19 total)
+    PFQ063D              [factor] values: NA | Hearing problem | Other impairment/problem | Vision/problem seeing | Fractures, bone/joint injury | Depression/anxiety/emotional problem | Hypertension/high blood pressure | Lung/breathing problem | ... (20 total)
+    PFQ063E              [factor] values: NA | Hypertension/high blood pressure | Heart problem | Lung/breathing problem | Vision/problem seeing | Other impairment/problem | Weight problem | Hearing problem | ... (20 total)
+    PFQ090               [factor] values: No | NA | Yes
+
+---- MCQ_I ----
+  Rows: 9575 | Columns: 90
+  Column names: SEQN, MCQ010, MCQ025, MCQ035, MCQ040, MCQ050, AGQ030, MCQ053, MCQ080, MCQ092, MCD093, MCQ149, MCQ151, MCQ160A, MCQ180A, MCQ195, MCQ160N, MCQ180N, MCQ160B, MCQ180B, MCQ160C, MCQ180C, MCQ160D, MCQ180D, MCQ160E, MCQ180E, MCQ160F, MCQ180F, MCQ160G, MCQ180G, MCQ160M, MCQ170M, MCQ180M, MCQ160K, MCQ170K, MCQ180K, MCQ160L, MCQ170L, MCQ180L, MCQ160O, MCQ203, MCQ206, MCQ220, MCQ230A, MCQ230B, MCQ230C, MCQ230D, MCQ240A, MCQ240AA, MCQ240B, MCQ240BB, MCQ240C, MCQ240CC, MCQ240D, MCQ240DD, MCQ240DK, MCQ240E, MCQ240F, MCQ240G, MCQ240H, MCQ240I, MCQ240J, MCQ240K, MCQ240L, MCQ240M, MCQ240N, MCQ240O, MCQ240P, MCQ240Q, MCQ240R, MCQ240S, MCQ240T, MCQ240U, MCQ240V, MCQ240W, MCQ240X, MCQ240Y, MCQ240Z, MCQ300A, MCQ300B, MCQ300C, MCQ365A, MCQ365B, MCQ365C, MCQ365D, MCQ370A, MCQ370B, MCQ370C, MCQ370D, OSQ230
+
+  Column details:
+    SEQN                 [numeric] range: 83732 to 93702
+    MCQ010               [factor] values: No | Yes | Don't know | Refused
+    MCQ025               [numeric] range: 1 to 99999
+    MCQ035               [factor] values: NA | Yes | No | Don't know
+    MCQ040               [factor] values: NA | No | Yes | Don't know
+    MCQ050               [factor] values: NA | No | Yes
+    AGQ030               [factor] values: NA | Yes | No | Don't know
+    MCQ053               [factor] values: No | Yes | Don't know | Refused
+    MCQ080               [factor] values: Yes | No | NA | Don't know
+    MCQ092               [factor] values: No | NA | Yes | Don't know
+    MCD093               [factor] values: NA | 1972 - 1991 | 1992 to present | Don't know | Before 1972 | Refused
+    MCQ149               [factor] values: NA | No | Yes | Refused
+    MCQ151               [numeric] range: 9 to 11
+    MCQ160A              [factor] values: Yes | No | NA | Don't know
+    MCQ180A              [numeric] range: 2 to 99999
+    MCQ195               [factor] values: Osteoarthritis or degenerative arthritis | NA | Other | Don't know | Rheumatoid arthritis | Psoriatic arthritis
+    MCQ160N              [factor] values: No | NA | Yes | Don't know
+    MCQ180N              [numeric] range: 18 to 99999
+    MCQ160B              [factor] values: No | NA | Yes | Don't know
+    MCQ180B              [numeric] range: 0 to 99999
+    MCQ160C              [factor] values: No | NA | Yes | Don't know
+    MCQ180C              [numeric] range: 10 to 99999
+    MCQ160D              [factor] values: No | NA | Yes | Don't know | Refused
+    MCQ180D              [numeric] range: 10 to 99999
+    MCQ160E              [factor] values: No | Yes | NA | Don't know
+    MCQ180E              [numeric] range: 20 to 99999
+    MCQ160F              [factor] values: No | NA | Yes | Don't know
+    MCQ180F              [numeric] range: 2 to 99999
+    MCQ160G              [factor] values: No | Yes | NA | Don't know
+    MCQ180G              [numeric] range: 13 to 99999
+    MCQ160M              [factor] values: No | Yes | NA | Don't know
+    MCQ170M              [factor] values: NA | No | Yes | Don't know
+    MCQ180M              [numeric] range: 8 to 99999
+    MCQ160K              [factor] values: No | NA | Yes | Don't know
+    MCQ170K              [factor] values: NA | No | Yes | Don't know
+    MCQ180K              [numeric] range: 0 to 99999
+    MCQ160L              [factor] values: No | Yes | NA | Don't know
+    MCQ170L              [factor] values: NA | Yes | No | Don't know
+    MCQ180L              [numeric] range: 5 to 99999
+    MCQ160O              [factor] values: No | Yes | NA | Don't know
+    MCQ203               [factor] values: No | Yes | NA | Don't know
+    MCQ206               [numeric] range: 2 to 99999
+    MCQ220               [factor] values: Yes | No | NA | Don't know
+    MCQ230A              [factor] values: Melanoma | NA | Skin (don't know what kind) | Uterus (uterine) | Lymphoma/ Hodgkin's disease | Testis (testicular) | Breast | Kidney | ... (27 total)
+    MCQ230B              [factor] values: NA | Uterus (uterine) | Pancreas (pancreatic) | Other | Liver | Melanoma | Colon | Prostate | ... (21 total)
+    MCQ230C              [factor] values: NA | Other | Uterus (uterine) | Melanoma | Liver | Skin (don't know what kind) | Thyroid | Ovary (ovarian)
+    MCQ230D              [numeric] range: Inf to -Inf
+    MCQ240A              [numeric] range: 7 to 80
+    MCQ240AA             [numeric] range: 30 to 54
+    MCQ240B              [factor] values: NA | 70 | Don't know
+    MCQ240BB             [numeric] range: 28 to 80
+    MCQ240C              [numeric] range: 69 to 72
+    MCQ240CC             [numeric] range: 18 to 99999
+    MCQ240D              [numeric] range: Inf to -Inf
+    MCQ240DD             [numeric] range: 3 to 99999
+    MCQ240DK             [numeric] range: 40 to 40
+    MCQ240E              [numeric] range: 25 to 99999
+    MCQ240F              [numeric] range: 16 to 54
+    MCQ240G              [numeric] range: 15 to 80
+    MCQ240H              [numeric] range: 64 to 71
+    MCQ240I              [numeric] range: Inf to -Inf
+    MCQ240J              [numeric] range: 27 to 76
+    MCQ240K              [numeric] range: Inf to -Inf
+    MCQ240L              [numeric] range: 3 to 80
+    MCQ240M              [numeric] range: 30 to 69
+    MCQ240N              [numeric] range: 40 to 80
+    MCQ240O              [numeric] range: 19 to 80
+    MCQ240P              [numeric] range: 15 to 80
+    MCQ240Q              [numeric] range: 44 to 80
+    MCQ240R              [numeric] range: Inf to -Inf
+    MCQ240S              [numeric] range: 18 to 74
+    MCQ240T              [numeric] range: 40 to 54
+    MCQ240U              [numeric] range: 46 to 80
+    MCQ240V              [numeric] range: 53 to 54
+    MCQ240W              [numeric] range: 27 to 80
+    MCQ240X              [numeric] range: 30 to 99999
+    MCQ240Y              [numeric] range: Inf to -Inf
+    MCQ240Z              [numeric] range: 42 to 80
+    MCQ300A              [factor] values: No | Don't know | NA | Yes | Refused
+    MCQ300B              [factor] values: No | Yes | Don't know | NA
+    MCQ300C              [factor] values: Yes | No | Don't know | NA | Refused
+    MCQ365A              [factor] values: No | Yes | NA | Don't know
+    MCQ365B              [factor] values: Yes | No | NA | Don't know
+    MCQ365C              [factor] values: No | Yes | NA | Don't know
+    MCQ365D              [factor] values: No | Yes | NA | Don't know
+    MCQ370A              [factor] values: Yes | No | NA | Don't know
+    MCQ370B              [factor] values: Yes | No | NA | Don't know
+    MCQ370C              [factor] values: No | Yes | NA | Don't know
+    MCQ370D              [factor] values: No | Yes | NA | Don't know
+    OSQ230               [factor] values: Yes | No | NA | Don't Know
+
+---- HIQ_I ----
+  Rows: 9971 | Columns: 17
+  Column names: SEQN, HIQ011, HIQ031A, HIQ031B, HIQ031C, HIQ031D, HIQ031E, HIQ031F, HIQ031G, HIQ031H, HIQ031I, HIQ031J, HIQ031AA, HIQ260, HIQ105, HIQ270, HIQ210
+
+  Column details:
+    SEQN                 [numeric] range: 83732 to 93702
+    HIQ011               [factor] values: Yes | No | Don't know | Refused
+    HIQ031A              [factor] values: Covered by private insurance | NA | Don't know | Refused
+    HIQ031B              [factor] values: NA | Covered by Medicare
+    HIQ031C              [factor] values: NA | Covered by Medi-Gap
+    HIQ031D              [factor] values: NA | Covered by Medicaid
+    HIQ031E              [factor] values: NA | Covered by SCHIP
+    HIQ031F              [factor] values: NA | Covered by military health care
+    HIQ031G              [factor] values: NA | Covered by Indian Health Service
+    HIQ031H              [factor] values: NA | Covered by state-sponsored health plan
+    HIQ031I              [factor] values: NA | Covered by other government insurance
+    HIQ031J              [factor] values: NA | Covered by single service plan
+    HIQ031AA             [factor] values: NA | No coverage of any type
+    HIQ260               [factor] values: NA | No | Yes | Don't know
+    HIQ105               [factor] values: NA | Yes | No
+    HIQ270               [factor] values: Yes | NA | No | Don't know | Refused
+    HIQ210               [factor] values: No | NA | Yes | Don't know
+
+---- HUQ_I ----
+  Rows: 9971 | Columns: 10
+  Column names: SEQN, HUQ010, HUQ020, HUQ030, HUQ041, HUQ051, HUQ061, HUQ071, HUD080, HUQ090
+
+  Column details:
+    SEQN                 [numeric] range: 83732 to 93702
+    HUQ010               [factor] values: Good, | Very good, | Fair, or | Poor? | Excellent, | Don't know | Refused
+    HUQ020               [factor] values: Worse, or | About the same? | Better, | NA | Don't know
+    HUQ030               [factor] values: Yes | There is no place | There is more than one place
+    HUQ041               [factor] values: Clinic or health center | Doesn't go to one place most often | Some other place | Doctor's office or HMO | Hospital outpatient department | NA | Hospital emergency room
+    HUQ051               [factor] values: 8 to 9 | None | 2 to 3 | 6 to 7 | 1 | 10 to 12 | 4 to 5 | 16 or more | ... (11 total)
+    HUQ061               [factor] values: NA | Never? | more than 2 years, but not more than 5 years ago, | more than 1 year, but not more than 2 years ago, | more than 6 months, but not more than 1 year ago, | more than 5 years ago, or | 6 months or less, | Don't know
+    HUQ071               [factor] values: No | Yes | Don't know
+    HUD080               [factor] values: NA | 5 | 4 | 2 | 1 | 3 | 6 times or more | Don't know
+    HUQ090               [factor] values: No | Yes | NA | Don't know
+
+---- OCQ_I ----
+  Rows: 6327 | Columns: 14
+  Column names: SEQN, OCD150, OCQ180, OCQ210, OCQ260, OCD270, OCQ600, OCQ610, OCQ630, OCQ640, OCQ660, OCQ380, OCD390G, OCD395
+
+  Column details:
+    SEQN                 [numeric] range: 83732 to 93702
+    OCD150               [factor] values: Working at a job or business, | Not working at a job or business? | With a job or business but not at work, | Looking for work, or | Don't know | NA | Refused
+    OCQ180               [numeric] range: 1 to 99999
+    OCQ210               [factor] values: NA | Yes | No | Refused | Don't know
+    OCQ260               [factor] values: A state government employee | NA | Self-employed in own business, professional practice or farm. | An employee of a private company, business, or individual for wages, salary, or commission. | A local government employee | Refused | Working without pay in family business or farm | A federal government employee | ... (9 total)
+    OCD270               [numeric] range: 0 to 77777
+    OCQ600               [factor] values: Never | NA | Seldom | No noise exposure past 12 months | Always | Usually | About half the time | Don't know | ... (9 total)
+    OCQ610               [numeric] range: 0 to 99
+    OCQ630               [numeric] range: 1 to 77
+    OCQ640               [numeric] range: 0 to 99
+    OCQ660               [numeric] range: 1 to 77
+    OCQ380               [factor] values: NA | Other | Retired | Taking care of house or family | Going to school | Disabled | On layoff | Unable to work for health reasons | ... (10 total)
+    OCD390G              [factor] values: Same as current occupation | Enter occupation | Never worked | Armed forces | Refused | Don't know | NA
+    OCD395               [numeric] range: 0 to 99999
+
+############################################################
+CYCLE: 2017-2018 (suffix _J)
+############################################################
+
+---- DEMO_J ----
+  Rows: 9254 | Columns: 46
+  Column names: SEQN, SDDSRVYR, RIDSTATR, RIAGENDR, RIDAGEYR, RIDAGEMN, RIDRETH1, RIDRETH3, RIDEXMON, RIDEXAGM, DMQMILIZ, DMQADFC, DMDBORN4, DMDCITZN, DMDYRSUS, DMDEDUC3, DMDEDUC2, DMDMARTL, RIDEXPRG, SIALANG, SIAPROXY, SIAINTRP, FIALANG, FIAPROXY, FIAINTRP, MIALANG, MIAPROXY, MIAINTRP, AIALANGA, DMDHHSIZ, DMDFMSIZ, DMDHHSZA, DMDHHSZB, DMDHHSZE, DMDHRGND, DMDHRAGZ, DMDHREDZ, DMDHRMAZ, DMDHSEDZ, WTINT2YR, WTMEC2YR, SDMVPSU, SDMVSTRA, INDHHIN2, INDFMIN2, INDFMPIR
+
+  Column details:
+    SEQN                 [numeric] range: 93703 to 102956
+    SDDSRVYR             [factor] values: NHANES 2017-2018 public release
+    RIDSTATR             [factor] values: Both interviewed and MEC examined | Interviewed only
+    RIAGENDR             [factor] values: Female | Male
+    RIDAGEYR             [numeric] range: 0 to 80
+    RIDAGEMN             [numeric] range: 0 to 24
+    RIDRETH1             [factor] values: Other Race - Including Multi-Racial | Non-Hispanic White | Non-Hispanic Black | Mexican American | Other Hispanic
+    RIDRETH3             [factor] values: Non-Hispanic Asian | Non-Hispanic White | Non-Hispanic Black | Other Race - Including Multi-Racial | Mexican American | Other Hispanic
+    RIDEXMON             [factor] values: May 1 through October 31 | November 1 through April 30 | NA
+    RIDEXAGM             [numeric] range: 0 to 239
+    DMQMILIZ             [factor] values: NA | No | Yes | Refused | Don't know
+    DMQADFC              [factor] values: NA | Yes | No | Refused
+    DMDBORN4             [factor] values: Born in 50 US states or Washington, DC | Others | Don't know | Refused
+    DMDCITZN             [factor] values: Citizen by birth or naturalization | Not a citizen of the US | Refused | Don't know | NA
+    DMDYRSUS             [factor] values: NA | 30 year or more, but less than 40 years | 20 year or more, but less than 30 years | 15 year or more, but less than 20 years | 40 year or more, but less than 50 years | 50 years or more | 5 year or more, but less than 10 years | 10 year or more, but less than 15 years | ... (12 total)
+    DMDEDUC3             [factor] values: NA | More than high school | 6th grade | 12th grade, no diploma | 2nd grade | 5th grade | 7th grade | 3rd grade | ... (18 total)
+    DMDEDUC2             [factor] values: NA | 9-11th grade (Includes 12th grade with no diploma) | Less than 9th grade | Some college or AA degree | College graduate or above | High school graduate/GED or equivalent | Don't know | Refused
+    DMDMARTL             [factor] values: NA | Divorced | Married | Widowed | Never married | Living with partner | Separated | Refused
+    RIDEXPRG             [factor] values: NA | The participant was not pregnant at exam | Cannot ascertain if the participant is pregnant at exam | Yes, positive lab pregnancy test or self-reported pregnant at exam
+    SIALANG              [factor] values: English | Spanish
+    SIAPROXY             [factor] values: Yes | No
+    SIAINTRP             [factor] values: No | Yes
+    FIALANG              [factor] values: English | NA | Spanish
+    FIAPROXY             [factor] values: No | NA | Yes
+    FIAINTRP             [factor] values: No | NA | Yes
+    MIALANG              [factor] values: NA | English | Spanish
+    MIAPROXY             [factor] values: NA | No | Yes
+    MIAINTRP             [factor] values: NA | No | Yes
+    AIALANGA             [factor] values: NA | English | Asian languages | Spanish
+    DMDHHSIZ             [factor] values: 5 | 4 | 1 | 7 or more people in the Household | 2 | 3 | 6
+    DMDFMSIZ             [factor] values: 5 | 4 | 1 | 7 or more people in the Family | 2 | 3 | 6
+    DMDHHSZA             [factor] values: 3 or more | 2 | 0 | 1
+    DMDHHSZB             [factor] values: 0 | 3 or more | 2 | 1
+    DMDHHSZE             [factor] values: 0 | 1 | 2 | 3 or more
+    DMDHRGND             [factor] values: Male | Female
+    DMDHRAGZ             [factor] values: 20-39 years | 60+ years | 40-59 years | <20 years
+    DMDHREDZ             [factor] values: College graduate or above | Less than high school degree | High school grad/GED or some college/AA degree | NA
+    DMDHRMAZ             [factor] values: Married/Living with partner | Widowed/Divorced/Separated | Never Married | NA
+    DMDHSEDZ             [factor] values: College graduate or above | High school grad/GED or some college/AA degree | NA | Less than high school degree
+    WTINT2YR             [numeric] range: 2571.06871234663 to 433085.005262496
+    WTMEC2YR             [numeric] range: 0 to 419762.836487576
+    SDMVPSU              [numeric] range: 1 to 2
+    SDMVSTRA             [numeric] range: 134 to 148
+    INDHHIN2             [factor] values: $100,000 and Over | $10,000 to $14,999 | NA | $65,000 to $74,999 | $25,000 to $34,999 | $ 5,000 to $ 9,999 | $15,000 to $19,999 | $35,000 to $44,999 | ... (17 total)
+    INDFMIN2             [factor] values: $100,000 and Over | $10,000 to $14,999 | NA | $65,000 to $74,999 | $25,000 to $34,999 | $ 5,000 to $ 9,999 | $15,000 to $19,999 | $35,000 to $44,999 | ... (17 total)
+    INDFMPIR             [numeric] range: 0 to 5
+
+---- DLQ_J ----
+  Rows: 8897 | Columns: 13
+  Column names: SEQN, DLQ010, DLQ020, DLQ040, DLQ050, DLQ060, DLQ080, DLQ100, DLQ110, DLQ130, DLQ140, DLQ150, DLQ170
+
+  Column details:
+    SEQN                 [numeric] range: 93703 to 102956
+    DLQ010               [factor] values: No | Yes | Don't know
+    DLQ020               [factor] values: No | Yes | Don't know
+    DLQ040               [factor] values: NA | No | Yes | Don't know | Refused
+    DLQ050               [factor] values: NA | No | Yes | Don't know
+    DLQ060               [factor] values: NA | No | Yes
+    DLQ080               [factor] values: NA | No | Yes | Don't know
+    DLQ100               [factor] values: NA | A few times a year | Never | Daily | Weekly | Monthly | Don't know
+    DLQ110               [factor] values: NA | No | Yes | Don't know
+    DLQ130               [factor] values: NA | A little | Somewhere in between a little and a lot | A lot | Don't know
+    DLQ140               [factor] values: NA | A few times a year | Never | Daily | Monthly | Weekly | Don't know | Refused
+    DLQ150               [factor] values: NA | No | Yes | Don't know
+    DLQ170               [factor] values: NA | A little | Somewhere in between a little and a lot | A lot | Don't know
+
+---- PFQ_J ----
+  Rows: 8421 | Columns: 36
+  Column names: SEQN, PFQ020, PFQ030, PFQ033, PFQ041, PFQ049, PFQ051, PFQ054, PFQ057, PFQ059, PFQ061A, PFQ061B, PFQ061C, PFQ061D, PFQ061E, PFQ061F, PFQ061G, PFQ061H, PFQ061I, PFQ061J, PFQ061K, PFQ061L, PFQ061M, PFQ061N, PFQ061O, PFQ061P, PFQ061Q, PFQ061R, PFQ061S, PFQ061T, PFQ063A, PFQ063B, PFQ063C, PFQ063D, PFQ063E, PFQ090
+
+  Column details:
+    SEQN                 [numeric] range: 93705 to 102956
+    PFQ020               [factor] values: NA | No | Yes | Don't know
+    PFQ030               [factor] values: NA | Yes | No
+    PFQ033               [factor] values: NA | No | Yes
+    PFQ041               [factor] values: NA | Yes | No | Don't know
+    PFQ049               [factor] values: No | NA | Yes | Don't know | Refused
+    PFQ051               [factor] values: No | NA | Yes | Don't know
+    PFQ054               [factor] values: No | NA | Yes
+    PFQ057               [factor] values: No | NA | Yes | Don't know
+    PFQ059               [factor] values: No | NA | Yes | Refused
+    PFQ061A              [factor] values: No difficulty | NA | Some difficulty | Do not do this activity | Much difficulty | Unable to do | Refused | Don't know
+    PFQ061B              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity | Don't know
+    PFQ061C              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity | Don't know
+    PFQ061D              [factor] values: No difficulty | NA | Much difficulty | Some difficulty | Unable to do | Do not do this activity | Don't know
+    PFQ061E              [factor] values: No difficulty | NA | Do not do this activity | Some difficulty | Much difficulty | Unable to do | Don't know
+    PFQ061F              [factor] values: No difficulty | NA | Some difficulty | Do not do this activity | Much difficulty | Unable to do | Don't know
+    PFQ061G              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Do not do this activity | Unable to do | Don't know
+    PFQ061H              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Do not do this activity | Unable to do | Don't know
+    PFQ061I              [factor] values: No difficulty | NA | Much difficulty | Some difficulty | Unable to do | Do not do this activity | Don't know
+    PFQ061J              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Do not do this activity | Unable to do | Don't know
+    PFQ061K              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity | Don't know
+    PFQ061L              [factor] values: No difficulty | NA | Some difficulty | Unable to do | Much difficulty | Do not do this activity | Don't know
+    PFQ061M              [factor] values: No difficulty | NA | Much difficulty | Unable to do | Some difficulty | Do not do this activity | Don't know
+    PFQ061N              [factor] values: No difficulty | NA | Much difficulty | Some difficulty | Unable to do | Do not do this activity | Don't know
+    PFQ061O              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity | Don't know
+    PFQ061P              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Do not do this activity | Unable to do | Don't know
+    PFQ061Q              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Do not do this activity | Unable to do | Don't know
+    PFQ061R              [factor] values: No difficulty | NA | Unable to do | Much difficulty | Some difficulty | Do not do this activity | Don't know
+    PFQ061S              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Do not do this activity | Unable to do | Don't know
+    PFQ061T              [factor] values: No difficulty | NA | Some difficulty | Much difficulty | Unable to do | Do not do this activity | Don't know
+    PFQ063A              [factor] values: NA | Arthritis/rheumatism | Vision/problem seeing | Mental retardation | Other impairment/problem | Back or neck problem | Heart problem | Fractures, bone/joint injury | ... (22 total)
+    PFQ063B              [factor] values: NA | Back or neck problem | Depression/anxiety/emotional problem | Other developmental problem (such as cerebral palsy) | Fractures, bone/joint injury | Other impairment/problem | Cancer | Arthritis/rheumatism | ... (20 total)
+    PFQ063C              [factor] values: NA | Hypertension/high blood pressure | Heart problem | Other impairment/problem | Depression/anxiety/emotional problem | Back or neck problem | Mental retardation | Hearing problem | ... (20 total)
+    PFQ063D              [factor] values: NA | Lung/breathing problem | Fractures, bone/joint injury | Diabetes | Hearing problem | Other injury | Hypertension/high blood pressure | Depression/anxiety/emotional problem | ... (19 total)
+    PFQ063E              [factor] values: NA | Vision/problem seeing | Back or neck problem | Fractures, bone/joint injury | Arthritis/rheumatism | Lung/breathing problem | Heart problem | Stroke problem | ... (18 total)
+    PFQ090               [factor] values: No | NA | Yes
+
+---- MCQ_J ----
+  Rows: 8897 | Columns: 76
+  Column names: SEQN, MCQ010, MCQ025, MCQ035, MCQ040, MCQ050, AGQ030, MCQ053, MCQ080, MCQ092, MCD093, MCQ149, MCQ151, RHD018, MCQ160A, MCD180A, MCQ195, MCQ160N, MCD180N, MCQ160B, MCD180B, MCQ160C, MCD180C, MCQ160D, MCD180D, MCQ160E, MCD180E, MCQ160F, MCD180F, MCQ160M, MCQ170M, MCD180M, MCQ160G, MCD180G, MCQ160K, MCQ170K, MCD180K, MCQ160O, MCQ160L, MCQ170L, MCD180L, MCQ500, MCQ510A, MCQ510B, MCQ510C, MCQ510D, MCQ510E, MCQ510F, MCQ520, MCQ530, MCQ540, MCQ550, MCQ560, MCQ570, MCQ203, MCQ206, MCQ220, MCQ230A, MCD240A, MCQ230B, MCD240B, MCQ230C, MCD240C, MCQ230D, MCQ300B, MCQ300C, MCQ300A, MCQ366A, MCQ366B, MCQ366C, MCQ366D, MCQ371A, MCQ371B, MCQ371C, MCQ371D, OSQ230
+
+  Column details:
+    SEQN                 [numeric] range: 93703 to 102956
+    MCQ010               [factor] values: No | Yes | Don't know
+    MCQ025               [numeric] range: 1 to 99999
+    MCQ035               [factor] values: NA | No | Yes | Don't know | Refused
+    MCQ040               [factor] values: NA | Yes | No | Refused | Don't know
+    MCQ050               [factor] values: NA | No | Yes
+    AGQ030               [factor] values: NA | No | Yes | Don't know
+    MCQ053               [factor] values: No | Yes | Don't know | Refused
+    MCQ080               [factor] values: NA | No | Yes | Don't know
+    MCQ092               [factor] values: NA | No | Yes | Don't know | Refused
+    MCD093               [factor] values: NA | 1972 - 1991 | 1992 to present | Before 1972 | Don't know
+    MCQ149               [factor] values: NA | No | Yes
+    MCQ151               [numeric] range: 7 to 11
+    RHD018               [numeric] range: 86 to 9999
+    MCQ160A              [factor] values: NA | Yes | No | Don't know
+    MCD180A              [numeric] range: 16 to 99999
+    MCQ195               [factor] values: NA | Rheumatoid arthritis | Osteoarthritis or degenerative arthritis | Psoriatic arthritis | Don't know | Other | Refused
+    MCQ160N              [factor] values: NA | No | Yes | Don't know
+    MCD180N              [numeric] range: 17 to 99999
+    MCQ160B              [factor] values: NA | No | Yes | Don't know
+    MCD180B              [numeric] range: 16 to 99999
+    MCQ160C              [factor] values: NA | No | Yes | Don't know
+    MCD180C              [numeric] range: 16 to 99999
+    MCQ160D              [factor] values: NA | No | Yes | Don't know
+    MCD180D              [numeric] range: 16 to 99999
+    MCQ160E              [factor] values: NA | No | Yes | Don't know
+    MCD180E              [numeric] range: 16 to 99999
+    MCQ160F              [factor] values: NA | No | Yes | Don't know
+    MCD180F              [numeric] range: 16 to 99999
+    MCQ160M              [factor] values: NA | No | Yes | Don't know | Refused
+    MCQ170M              [factor] values: NA | No | Yes | Don't know | Refused
+    MCD180M              [numeric] range: 16 to 99999
+    MCQ160G              [factor] values: NA | No | Yes | Don't know
+    MCD180G              [numeric] range: 16 to 99999
+    MCQ160K              [factor] values: NA | No | Yes | Don't know
+    MCQ170K              [factor] values: NA | No | Yes | Don't know
+    MCD180K              [numeric] range: 16 to 99999
+    MCQ160O              [factor] values: NA | No | Yes | Don't know
+    MCQ160L              [factor] values: NA | No | Yes | Don't know
+    MCQ170L              [factor] values: NA | Yes | No | Don't know
+    MCD180L              [numeric] range: 16 to 99999
+    MCQ500               [factor] values: NA | No | Yes
+    MCQ510A              [factor] values: NA | Don't know | Fatty liver
+    MCQ510B              [factor] values: NA | Liver fibrosis
+    MCQ510C              [factor] values: NA | Liver cirrhosis
+    MCQ510D              [factor] values: NA | Viral hepatitis
+    MCQ510E              [factor] values: NA | Autoimmune hepatitis
+    MCQ510F              [factor] values: NA | Other liver disease
+    MCQ520               [factor] values: NA | No | Yes | Don't know
+    MCQ530               [factor] values: NA | Mid upper abdomen | Left upper abdomen | Right upper abdomen | Don't know
+    MCQ540               [factor] values: NA | No | Yes
+    MCQ550               [factor] values: NA | No | Yes | Don't know
+    MCQ560               [factor] values: NA | No | Yes | Don't know
+    MCQ570               [numeric] range: 15 to 99999
+    MCQ203               [factor] values: NA | No | Yes | Don't know
+    MCQ206               [numeric] range: 1 to 76
+    MCQ220               [factor] values: NA | No | Yes | Don't know
+    MCQ230A              [factor] values: NA | Brain | Prostate | Lymphoma/ Hodgkin's disease | Other | Cervix (cervical) | Uterus (uterine) | Colon | ... (31 total)
+    MCD240A              [numeric] range: 16 to 99999
+    MCQ230B              [factor] values: NA | Rectum (rectal) | Thyroid | Breast | Skin (don't know what kind) | Kidney | Colon | Prostate | ... (21 total)
+    MCD240B              [numeric] range: 18 to 99999
+    MCQ230C              [factor] values: NA | Uterus (uterine) | Prostate | Leukemia | Other | Skin (don't know what kind) | Lung | Skin (non-melanoma)
+    MCD240C              [numeric] range: 33 to 80
+    MCQ230D              [factor] values: NA | More than 3 kinds
+    MCQ300B              [factor] values: NA | Yes | No | Don't know
+    MCQ300C              [factor] values: NA | Yes | No | Don't know | Refused
+    MCQ300A              [factor] values: NA | No | Yes | Don't know | Refused
+    MCQ366A              [factor] values: NA | No | Yes | Don't know
+    MCQ366B              [factor] values: NA | No | Yes | Don't know
+    MCQ366C              [factor] values: NA | No | Yes | Don't know
+    MCQ366D              [factor] values: NA | No | Yes | Don't know
+    MCQ371A              [factor] values: NA | Yes | No | Don't know
+    MCQ371B              [factor] values: NA | Yes | No | Don't know
+    MCQ371C              [factor] values: NA | Yes | No | Don't know
+    MCQ371D              [factor] values: NA | Yes | No | Don't know
+    OSQ230               [factor] values: NA | No | Yes | Don't Know
+
+---- HIQ_J ----
+  Rows: 9254 | Columns: 16
+  Column names: SEQN, HIQ011, HIQ031A, HIQ031B, HIQ031C, HIQ031D, HIQ031E, HIQ031F, HIQ031H, HIQ031I, HIQ031J, HIQ031AA, HIQ260, HIQ105, HIQ270, HIQ210
+
+  Column details:
+    SEQN                 [numeric] range: 93703 to 102956
+    HIQ011               [factor] values: Yes | No | Don't know | Refused
+    HIQ031A              [factor] values: Covered by private insurance | NA | Don't know | Refused
+    HIQ031B              [factor] values: NA | Covered by Medicare
+    HIQ031C              [factor] values: NA | Covered by Medi-Gap
+    HIQ031D              [factor] values: NA | Covered by Medicaid
+    HIQ031E              [factor] values: NA | Covered by CHIP
+    HIQ031F              [factor] values: NA | Covered by military health care
+    HIQ031H              [factor] values: NA | Covered by state-sponsored health plan
+    HIQ031I              [factor] values: NA | Covered by other government insurance
+    HIQ031J              [factor] values: NA | Covered by single service plan
+    HIQ031AA             [factor] values: NA | No coverage of any type
+    HIQ260               [factor] values: NA | Don't know | No | Yes | Refused
+    HIQ105               [factor] values: NA | Yes | No
+    HIQ270               [factor] values: Yes | NA | No | Don't know | Refused
+    HIQ210               [factor] values: No | NA | Yes | Don't know | Refused
+
+---- HUQ_J ----
+  Rows: 9254 | Columns: 10
+  Column names: SEQN, HUQ010, HUQ020, HUQ030, HUQ041, HUQ051, HUQ061, HUQ071, HUD080, HUQ090
+
+  Column details:
+    SEQN                 [numeric] range: 93703 to 102956
+    HUQ010               [factor] values: Excellent, | Good, | Fair, or | Very good, | Poor? | Refused | Don't know
+    HUQ020               [factor] values: About the same? | NA | Better, | Worse, or | Don't know
+    HUQ030               [factor] values: Yes | There is no place | There is more than one place | Don't know
+    HUQ041               [factor] values: Doctor's office or HMO | Clinic or health center | NA | Hospital outpatient department | Hospital emergency room | Some other place | Don't know | Doesn't go to one place most often
+    HUQ051               [factor] values: 4 to 5 | 2 to 3 | 1 | 6 to 7 | None | 13 to 15 | 16 or more | 8 to 9 | ... (10 total)
+    HUQ061               [factor] values: NA | more than 1 year, but not more than 2 years ago, | more than 2 years, but not more than 5 years ago, | more than 6 months, but not more than 1 year ago, | Never? | more than 5 years ago, or | 6 months or less, | Don't know
+    HUQ071               [factor] values: No | Yes | Don't know
+    HUD080               [factor] values: NA | 1 | 2 | 3 | 4 | Don't know | 6 times or more | 5
+    HUQ090               [factor] values: NA | No | Yes | Don't know | Refused
+
+---- OCQ_J ----
+  Rows: 6161 | Columns: 10
+  Column names: SEQN, OCD150, OCQ180, OCQ210, OCQ260, OCD270, OCQ670, OCQ380, OCD390G, OCD395
+
+  Column details:
+    SEQN                 [numeric] range: 93705 to 102956
+    OCD150               [factor] values: Working at a job or business, | Not working at a job or business? | With a job or business but not at work, | Looking for work, or | Don't know
+    OCQ180               [numeric] range: 5 to 99999
+    OCQ210               [factor] values: Yes | NA | No | Don't know
+    OCQ260               [factor] values: An employee of a private company, business, or individual for wages, salary, or commission. | NA | A local government employee | A federal government employee | A state government employee | Self-employed in own business, professional practice or farm. | Don't know | Working without pay in family business or farm | ... (9 total)
+    OCD270               [numeric] range: 0 to 99999
+    OCQ670               [factor] values: Variable (early mornings, days, and nights) | NA | Traditional 9 AM to 5 PM day | Early mornings | Evening or nights | Refused | Don't know
+    OCQ380               [factor] values: NA | Going to school | Unable to work for health reasons | Disabled | Retired | Other | Taking care of house or family | On layoff | ... (9 total)
+    OCD390G              [factor] values: Same as current occupation | Never worked | Enter occupation | Armed forces | Refused | Don't know
+    OCD395               [numeric] range: 5 to 99999

@@ -1,0 +1,5 @@
+income_tier,n,false_negative_rate
+Above 4x poverty line,991,0.7424242424242424
+Middle (2-4x),1651,0.5235602094240838
+Below poverty line,984,0.49230769230769234
+Near poverty (1-2x),1109,0.46448087431693985

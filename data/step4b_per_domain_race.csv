@@ -1,0 +1,37 @@
+race_eth_label_orig,n,false_negative_rate,domain
+Mexican American,727,1,hearing_difficulty
+Non-Hispanic Asian,600,1,hearing_difficulty
+Non-Hispanic Black,1023,1,hearing_difficulty
+Other Hispanic,491,1,hearing_difficulty
+Other Race - Including Multi-Racial,193,1,hearing_difficulty
+Non-Hispanic White,1698,0.9282051282051282,hearing_difficulty
+Non-Hispanic Asian,600,1,vision_difficulty
+Non-Hispanic Black,1022,1,vision_difficulty
+Other Race - Including Multi-Racial,193,1,vision_difficulty
+Non-Hispanic White,1697,0.99,vision_difficulty
+Mexican American,727,0.9649122807017544,vision_difficulty
+Other Hispanic,491,0.95,vision_difficulty
+Non-Hispanic Black,1021,0.9587628865979382,concentration_difficulty
+Non-Hispanic Asian,600,0.9333333333333333,concentration_difficulty
+Mexican American,727,0.922077922077922,concentration_difficulty
+Other Hispanic,491,0.90625,concentration_difficulty
+Non-Hispanic White,1697,0.8981481481481481,concentration_difficulty
+Other Race - Including Multi-Racial,193,0.896551724137931,concentration_difficulty
+Non-Hispanic Asian,600,0.6363636363636364,mobility_difficulty
+Other Race - Including Multi-Racial,193,0.5882352941176471,mobility_difficulty
+Other Hispanic,491,0.47435897435897434,mobility_difficulty
+Non-Hispanic Black,1023,0.43506493506493504,mobility_difficulty
+Non-Hispanic White,1698,0.3955223880597015,mobility_difficulty
+Mexican American,727,0.34444444444444444,mobility_difficulty
+Non-Hispanic Black,1022,0.9473684210526316,selfcare_difficulty
+Non-Hispanic Asian,600,0.8235294117647058,selfcare_difficulty
+Non-Hispanic White,1698,0.8041237113402062,selfcare_difficulty
+Other Hispanic,492,0.7857142857142857,selfcare_difficulty
+Mexican American,727,0.7631578947368421,selfcare_difficulty
+Other Race - Including Multi-Racial,193,0.5625,selfcare_difficulty
+Other Race - Including Multi-Racial,192,0.8571428571428572,errands_difficulty
+Non-Hispanic White,1697,0.7724550898203593,errands_difficulty
+Mexican American,727,0.6727272727272727,errands_difficulty
+Non-Hispanic Black,1023,0.6588235294117647,errands_difficulty
+Non-Hispanic Asian,600,0.6521739130434783,errands_difficulty
+Other Hispanic,492,0.627906976744186,errands_difficulty

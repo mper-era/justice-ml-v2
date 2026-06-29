@@ -1,0 +1,9 @@
+education_orig,rule_a_harm_rate,rule_b_harm_rate,rule_a_n,rule_b_n
+Missing,0.17142857142857143,0.045454545454545456,35,110
+Some college or AA degree,0.10687022900763359,0.09717868338557993,131,319
+College graduate or above,0.08928571428571429,0.04332129963898917,56,277
+9-11th grade (Includes 12th grade with no diploma),0.05555555555555555,0.25301204819277107,72,83
+Don't know,0,NA,2,NA
+High school graduate/GED or equivalent,0,0.15418502202643172,119,227
+Less than 9th grade,0,0.19642857142857142,48,56
+Refused,NA,0,NA,1
